@@ -28,7 +28,7 @@ export default defineConfig({
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
     baseURL: 'http://localhost:8000',
-    headless: false,   // kör med synlig webbläsare
+    headless: !process.env.CI ? false : true,   // headless on CI, visible browser locally
     viewport: { width: 1280, height: 720 },
     actionTimeout: 10000,
 
