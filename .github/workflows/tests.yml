@@ -74,6 +74,24 @@ jobs:
     - name: Install dependencies
       run: npm ci
     
+    - name: Start development server
+      run: npx http-server . -p 5500 --silence &
+      shell: bash
+    
+    - name: Wait for server to be ready
+      run: |
+        for i in {1..30}; do
+          if curl -f http://127.0.0.1:5500 > /dev/null 2>&1; then
+            echo "Server is ready!"
+            exit 0
+          fi
+          echo "Waiting for server... ($i/30)"
+          sleep 1
+        done
+        echo "Server failed to start"
+        exit 1
+      shell: bash
+    
     - name: Run Cypress tests (Headless)
       run: npx cypress run --headless
     
