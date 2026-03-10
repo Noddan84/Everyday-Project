@@ -105,6 +105,8 @@ test.describe('Everyday Homepage', () => {
 
         if (await menuToggle.isVisible() && !isActive) {
           await menuToggle.click();
+          // Wait for the transition and toggle logic to complete
+          await page.waitForTimeout(400);
           await expect(sidebar).toHaveClass(/active/, { timeout: 5000 });
         }
       }
