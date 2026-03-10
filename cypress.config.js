@@ -9,7 +9,6 @@ module.exports = defineConfig({
   e2e: {
     specPattern: "**/*.feature",
     baseUrl: "http://127.0.0.1:5500", // ändra till din dev-server
-    allowCypressEnv: false,
     async setupNodeEvents(on, config) {
       await addCucumberPreprocessorPlugin(on, config);
 
