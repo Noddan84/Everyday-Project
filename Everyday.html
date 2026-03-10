@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everyday</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Sidomeny -->
+    <nav class="sidebar" id="sidebar">
+        <ul>
+            <li><button type="button" class="menu-btn" data-section="Home"><span>.: Home :.</span> <i
+                        class="fa-solid fa-house"></i></button></li><br>
+            <li><button type="button" class="menu-btn" data-section="Focus"><span>.: Focus :.</span> <i
+                        class="fa-solid fa-bullseye"></i></button></li><br>
+            <li><button type="button" class="menu-btn" data-section="Flow"><span>.: Flow :.</span> <i
+                        class="fa-solid fa-person-running"></i></button></li><br>
+            <li><button type="button" class="menu-btn" data-section="Share"><span>.: Share :.</span> <i
+                        class="fa-solid fa-user-group"></i></button></li><br>
+            <li><button type="button" class="menu-btn" data-section="Explore"><span>.: Explore :.</span> <i
+                        class="fa-solid fa-compass"></i></button></li><br>
+            <li><button type="button" class="menu-btn" data-section="Reminder"><span>.: Reminder :.</span> <i
+                        class="fa-solid fa-bell"></i></button></li><br>
+        </ul>
+        <!-- Footer för mobil, syns endast när sidomenyn är aktiv -->
+        <div class="sidebar-footer">
+            <span>TEST© 2026 Everyday. Alla rättigheter reserverade.</span>
+            <br>
+            <span>Version v1.337</span>
+            <br>
+            <button type="button" class="footer-link" data-section="Kontakt">.: Kontakt :.</button>
+        </div>
+    </nav>
+    <div id="overlay"></div>
+    <!-- Huvudinnehåll -->
+    <main class="main-content">
+        <header class="page-header">
+            <button id="menu-toggle" class="menu-toggle">☰</button>
+            <h1>.: EVERYDAY :.</h1>
+        </header>
+
+        <section class="section-content">
+            <h2 id="sectionTitle">Home</h2>
+            <div id="sectionText">
+                <h3>Denna hemsida har Paus-it övningar.</h3>
+                <ul>
+                    <li><strong>Focus:</strong> Reflektionsövningar för kontorsmiljö.</li>
+                    <li><strong>Flow:</strong> Fysiska övningar med instruktioner, bilder och videor.</li>
+                    <li><strong>Share:</strong> Övningar och aktiviteter för social interaktion.</li>
+                    <li><strong>Explore:</strong> Utforskande övningar för variation under dagen.</li>
+                    <li><strong>Reminder:</strong> Lägg in påminnelser för övningar, möten eller pauser.</li>
+                    <li><strong>Kontakt:</strong> Kontaktinformation och adress till Iris Kraft.</li>
+                </ul>
+                <p>Klicka på knapparna i sidomenyn för att komma igång!</p>
+                <hr>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <span>© 2026 Everyday. Alla rättigheter reserverade.TEST</span>
+        <span>Version v1.337</span>
+        <button type="button" class="footer-link" data-section="Kontakt">Kontakt</button>
+    </footer>
+
+    <!-- Koppla in main.js som modul -->
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+{
+    "git.enabled": true,
+    "git.path": "C:\\Git\\bin\\git.exe",
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "terminal.integrated.env.windows": {
+        "PATH": "C:\\Node;C:\\Git\\bin;${env:PATH}"
+    },
+    "typescript.tsserver.nodePath": "C:\\Node",
+    "typescript.npm": "C:\\Node\\npm.cmd",
+    "typescript.disableAutomaticTypeAcquisition": false,
+    "[python]": {
+        "defaultInterpreterPath": "${workspaceFolder}"
+    }
+}

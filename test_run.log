@@ -1,0 +1,2291 @@
+
+Running 152 tests using 2 workers
+
+[1A[2K[1/152] [chromium] › tests\homepage.spec.js:15:5 › Everyday Homepage › Page Layout & Header › should display main header
+[1A[2K[2/152] [chromium] › tests\homepage.spec.js:11:5 › Everyday Homepage › Page Layout & Header › should load the homepage successfully
+[1A[2K[3/152] [chromium] › tests\homepage.spec.js:20:5 › Everyday Homepage › Page Layout & Header › should display footer with copyright and version
+[1A[2K[4/152] [chromium] › tests\homepage.spec.js:27:5 › Everyday Homepage › Page Layout & Header › should display welcome section by default
+[1A[2K[5/152] [chromium] › tests\homepage.spec.js:50:5 › Everyday Homepage › Sidebar Navigation › should display sidebar with all menu items
+[1A[2K[6/152] [chromium] › tests\homepage.spec.js:74:5 › Everyday Homepage › Sidebar Navigation › should navigate to Home section
+[1A[2K[7/152] [chromium] › tests\homepage.spec.js:80:5 › Everyday Homepage › Sidebar Navigation › should navigate to Focus section
+[1A[2K[8/152] [chromium] › tests\homepage.spec.js:90:5 › Everyday Homepage › Sidebar Navigation › should navigate to Flow section
+[1A[2K[9/152] [chromium] › tests\homepage.spec.js:100:5 › Everyday Homepage › Sidebar Navigation › should navigate to Share section
+[1A[2K[10/152] [chromium] › tests\homepage.spec.js:106:5 › Everyday Homepage › Sidebar Navigation › should navigate to Explore section
+[1A[2K[11/152] [chromium] › tests\homepage.spec.js:112:5 › Everyday Homepage › Sidebar Navigation › should navigate to Reminder section
+[1A[2K[12/152] [chromium] › tests\homepage.spec.js:118:5 › Everyday Homepage › Sidebar Navigation › should navigate to Kontakt section via footer
+[1A[2K[13/152] [chromium] › tests\homepage.spec.js:126:5 › Everyday Homepage › Mobile Menu Toggle › should display menu toggle button on mobile
+[1A[2K[14/152] [chromium] › tests\homepage.spec.js:132:5 › Everyday Homepage › Mobile Menu Toggle › should toggle sidebar on mobile click
+[1A[2K[15/152] [chromium] › tests\homepage.spec.js:149:5 › Everyday Homepage › Mobile Menu Toggle › should toggle sidebar multiple times
+[1A[2K[16/152] [chromium] › tests\homepage.spec.js:176:5 › Everyday Homepage › Content Display › Flow section should display exercises with videos
+[1A[2K[17/152] [chromium] › tests\homepage.spec.js:191:5 › Everyday Homepage › Content Display › Flow section should display exercise images
+[1A[2K[18/152] [chromium] › tests\homepage.spec.js:200:5 › Everyday Homepage › Content Display › Focus section should display reflection content
+[1A[2K  1) [chromium] › tests\homepage.spec.js:149:5 › Everyday Homepage › Mobile Menu Toggle › should toggle sidebar multiple times 
+
+    [31mTest timeout of 30000ms exceeded.[39m
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#menuToggle')[22m
+    [2m    - locator resolved to <div id="menuToggle" class="menu-toggle">☰</div>[22m
+    [2m  - attempting click action[22m
+    [2m    2 × waiting for element to be visible, enabled and stable[22m
+    [2m      - element is visible, enabled and stable[22m
+    [2m      - scrolling into view if needed[22m
+    [2m      - done scrolling[22m
+    [2m      - <nav id="sidebar" class="sidebar active">…</nav> intercepts pointer events[22m
+    [2m    - retrying click action[22m
+    [2m    - waiting 20ms[22m
+    [2m    2 × waiting for element to be visible, enabled and stable[22m
+    [2m      - element is visible, enabled and stable[22m
+    [2m      - scrolling into view if needed[22m
+    [2m      - done scrolling[22m
+    [2m      - <nav id="sidebar" class="sidebar active">…</nav> intercepts pointer events[22m
+    [2m    - retrying click action[22m
+    [2m      - waiting 100ms[22m
+    [2m    13 × waiting for element to be visible, enabled and stable[22m
+    [2m       - element is visible, enabled and stable[22m
+    [2m       - scrolling into view if needed[22m
+    [2m       - done scrolling[22m
+    [2m       - <nav id="sidebar" class="sidebar active">…</nav> intercepts pointer events[22m
+    [2m     - retrying click action[22m
+    [2m       - waiting 500ms[22m
+
+
+      153 |       
+      154 |       for (let i = 0; i < 3; i++) {
+    > 155 |         await menuToggle.click();
+          |                          ^
+      156 |         await page.waitForTimeout(100);
+      157 |       }
+      158 |       
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:155:26
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\homepage-Everyday-Homepage-ea1b7-ggle-sidebar-multiple-times-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\homepage-Everyday-Homepage-ea1b7-ggle-sidebar-multiple-times-chromium\error-context.md
+
+
+[1A[2K[19/152] [chromium] › tests\homepage.spec.js:230:5 › Everyday Homepage › Reminder Functionality › should have reminder list elements
+[1A[2K[20/152] [chromium] › tests\homepage.spec.js:244:5 › Everyday Homepage › Responsive Design › should be responsive on desktop
+[1A[2K[21/152] [chromium] › tests\homepage.spec.js:222:5 › Everyday Homepage › Reminder Functionality › should display Reminder section with input fields
+[1A[2K[22/152] [chromium] › tests\homepage.spec.js:250:5 › Everyday Homepage › Responsive Design › should be responsive on tablet
+[1A[2K[23/152] [chromium] › tests\homepage.spec.js:256:5 › Everyday Homepage › Responsive Design › should be responsive on mobile
+[1A[2K  2) [chromium] › tests\homepage.spec.js:256:5 › Everyday Homepage › Responsive Design › should be responsive on mobile 
+
+    [31mTest timeout of 30000ms exceeded while running "beforeEach" hook.[39m
+
+      3 | test.describe('Everyday Homepage', () => {
+      4 |   
+    > 5 |   test.beforeEach(async ({ page }) => {
+        |        ^
+      6 |     await page.goto('/Everyday.html');
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:5:8
+
+    Error: browserContext.newPage: Test timeout of 30000ms exceeded.
+
+
+[1A[2K  3) [chromium] › tests\homepage.spec.js:250:5 › Everyday Homepage › Responsive Design › should be responsive on tablet 
+
+    [31mTest timeout of 30000ms exceeded while running "beforeEach" hook.[39m
+
+      3 | test.describe('Everyday Homepage', () => {
+      4 |   
+    > 5 |   test.beforeEach(async ({ page }) => {
+        |        ^
+      6 |     await page.goto('/Everyday.html');
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:5:8
+
+    Error: browserContext.newPage: Test timeout of 30000ms exceeded.
+
+
+[1A[2K[24/152] [chromium] › tests\homepage.spec.js:262:5 › Everyday Homepage › Responsive Design › should maintain content visibility on all viewports
+[1A[2K[25/152] [chromium] › tests\homepage.spec.js:284:5 › Everyday Homepage › CSS & Styling › should load stylesheet
+[1A[2K[26/152] [chromium] › tests\homepage.spec.js:289:5 › Everyday Homepage › CSS & Styling › should load Font Awesome icons
+[1A[2K  4) [chromium] › tests\homepage.spec.js:289:5 › Everyday Homepage › CSS & Styling › should load Font Awesome icons 
+
+    [31mTest timeout of 30000ms exceeded while running "beforeEach" hook.[39m
+
+      3 | test.describe('Everyday Homepage', () => {
+      4 |   
+    > 5 |   test.beforeEach(async ({ page }) => {
+        |        ^
+      6 |     await page.goto('/Everyday.html');
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:5:8
+
+    Error: browserContext.newPage: Test timeout of 30000ms exceeded.
+
+
+[1A[2K  5) [chromium] › tests\homepage.spec.js:284:5 › Everyday Homepage › CSS & Styling › should load stylesheet 
+
+    [31mTest timeout of 30000ms exceeded while running "beforeEach" hook.[39m
+
+      3 | test.describe('Everyday Homepage', () => {
+      4 |   
+    > 5 |   test.beforeEach(async ({ page }) => {
+        |        ^
+      6 |     await page.goto('/Everyday.html');
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:5:8
+
+    Error: page.goto: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - navigating to "http://localhost:8000/Everyday.html", waiting until "load"[22m
+
+
+      4 |   
+      5 |   test.beforeEach(async ({ page }) => {
+    > 6 |     await page.goto('/Everyday.html');
+        |                ^
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+      9 |
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:6:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\homepage-Everyday-Homepage-3e6cc-ling-should-load-stylesheet-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\homepage-Everyday-Homepage-3e6cc-ling-should-load-stylesheet-chromium\error-context.md
+
+
+[1A[2K[27/152] [chromium] › tests\homepage.spec.js:294:5 › Everyday Homepage › CSS & Styling › should load Google Fonts
+[1A[2K[28/152] [chromium] › tests\homepage.spec.js:300:5 › Everyday Homepage › CSS & Styling › should have icons in navigation buttons
+[1A[2K[29/152] [chromium] › tests\homepage.spec.js:308:5 › Everyday Homepage › Accessibility › should have proper semantic HTML structure
+[1A[2K[30/152] [chromium] › tests\homepage.spec.js:318:5 › Everyday Homepage › Accessibility › should have language attribute on html element
+[1A[2K  6) [chromium] › tests\homepage.spec.js:300:5 › Everyday Homepage › CSS & Styling › should have icons in navigation buttons 
+
+    [31mTest timeout of 30000ms exceeded while running "beforeEach" hook.[39m
+
+      3 | test.describe('Everyday Homepage', () => {
+      4 |   
+    > 5 |   test.beforeEach(async ({ page }) => {
+        |        ^
+      6 |     await page.goto('/Everyday.html');
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:5:8
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\homepage-Everyday-Homepage-c4408-icons-in-navigation-buttons-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\homepage-Everyday-Homepage-c4408-icons-in-navigation-buttons-chromium\error-context.md
+
+
+[1A[2K  7) [chromium] › tests\homepage.spec.js:318:5 › Everyday Homepage › Accessibility › should have language attribute on html element 
+
+    [31mTest timeout of 30000ms exceeded while running "beforeEach" hook.[39m
+
+      3 | test.describe('Everyday Homepage', () => {
+      4 |   
+    > 5 |   test.beforeEach(async ({ page }) => {
+        |        ^
+      6 |     await page.goto('/Everyday.html');
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:5:8
+
+    Error: browserContext.newPage: Test timeout of 30000ms exceeded.
+
+
+[1A[2K[31/152] [chromium] › tests\homepage.spec.js:324:5 › Everyday Homepage › Accessibility › should have proper heading hierarchy in sections
+[1A[2K[32/152] [chromium] › tests\homepage.spec.js:332:5 › Everyday Homepage › Accessibility › should have meta viewport tag
+[1A[2K[33/152] [chromium] › tests\homepage.spec.js:337:5 › Everyday Homepage › Accessibility › should have proper character encoding
+[1A[2K[34/152] [chromium] › tests\homepage.spec.js:359:5 › Everyday Homepage › Navigation Button Interactions › should highlight/interact with Focus button
+[1A[2K  8) [chromium] › tests\homepage.spec.js:337:5 › Everyday Homepage › Accessibility › should have proper character encoding 
+
+    [31mTest timeout of 30000ms exceeded while running "beforeEach" hook.[39m
+
+      3 | test.describe('Everyday Homepage', () => {
+      4 |   
+    > 5 |   test.beforeEach(async ({ page }) => {
+        |        ^
+      6 |     await page.goto('/Everyday.html');
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:5:8
+
+    Error: browserContext.newPage: Test timeout of 30000ms exceeded.
+
+
+[1A[2K  9) [chromium] › tests\homepage.spec.js:359:5 › Everyday Homepage › Navigation Button Interactions › should highlight/interact with Focus button 
+
+    [31mTest timeout of 30000ms exceeded while running "beforeEach" hook.[39m
+
+      3 | test.describe('Everyday Homepage', () => {
+      4 |   
+    > 5 |   test.beforeEach(async ({ page }) => {
+        |        ^
+      6 |     await page.goto('/Everyday.html');
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:5:8
+
+    Error: browserContext.newPage: Test timeout of 30000ms exceeded.
+
+
+[1A[2K[35/152] [chromium] › tests\homepage.spec.js:367:5 › Everyday Homepage › Navigation Button Interactions › should allow rapid section switching
+[1A[2K[36/152] [chromium] › tests\homepage.spec.js:391:5 › Everyday Homepage › Navigation Button Interactions › should switch between sections smoothly
+[1A[2K[37/152] [chromium] › tests\homepage.spec.js:424:5 › Everyday Homepage › Flow Exercise Content › should display all Flow exercises
+[1A[2K[38/152] [chromium] › tests\homepage.spec.js:447:5 › Everyday Homepage › Flow Exercise Content › should have exercise descriptions
+[1A[2K  10) [chromium] › tests\homepage.spec.js:424:5 › Everyday Homepage › Flow Exercise Content › should display all Flow exercises 
+
+    [31mTest timeout of 30000ms exceeded while running "beforeEach" hook.[39m
+
+      3 | test.describe('Everyday Homepage', () => {
+      4 |   
+    > 5 |   test.beforeEach(async ({ page }) => {
+        |        ^
+      6 |     await page.goto('/Everyday.html');
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:5:8
+
+    Error: browserContext.newPage: Test timeout of 30000ms exceeded.
+
+
+[1A[2K  11) [chromium] › tests\homepage.spec.js:447:5 › Everyday Homepage › Flow Exercise Content › should have exercise descriptions 
+
+    [31mTest timeout of 30000ms exceeded while running "beforeEach" hook.[39m
+
+      3 | test.describe('Everyday Homepage', () => {
+      4 |   
+    > 5 |   test.beforeEach(async ({ page }) => {
+        |        ^
+      6 |     await page.goto('/Everyday.html');
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:5:8
+
+    Error: browserContext.newPage: Test timeout of 30000ms exceeded.
+
+
+[1A[2K[39/152] [firefox] › tests\homepage.spec.js:11:5 › Everyday Homepage › Page Layout & Header › should load the homepage successfully
+[1A[2K[40/152] [firefox] › tests\homepage.spec.js:15:5 › Everyday Homepage › Page Layout & Header › should display main header
+[1A[2K  12) [firefox] › tests\homepage.spec.js:11:5 › Everyday Homepage › Page Layout & Header › should load the homepage successfully 
+
+    [31mTest timeout of 30000ms exceeded while running "beforeEach" hook.[39m
+
+      3 | test.describe('Everyday Homepage', () => {
+      4 |   
+    > 5 |   test.beforeEach(async ({ page }) => {
+        |        ^
+      6 |     await page.goto('/Everyday.html');
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:5:8
+
+    Error: browserContext.newPage: Test timeout of 30000ms exceeded.
+
+
+[1A[2K  13) [firefox] › tests\homepage.spec.js:15:5 › Everyday Homepage › Page Layout & Header › should display main header 
+
+    [31mTest timeout of 30000ms exceeded while running "beforeEach" hook.[39m
+
+      3 | test.describe('Everyday Homepage', () => {
+      4 |   
+    > 5 |   test.beforeEach(async ({ page }) => {
+        |        ^
+      6 |     await page.goto('/Everyday.html');
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:5:8
+
+    Error: page.waitForLoadState: Test timeout of 30000ms exceeded.
+
+       5 |   test.beforeEach(async ({ page }) => {
+       6 |     await page.goto('/Everyday.html');
+    >  7 |     await page.waitForLoadState('networkidle');
+         |                ^
+       8 |   });
+       9 |
+      10 |   test.describe('Page Layout & Header', () => {
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:7:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\homepage-Everyday-Homepage-fa852--should-display-main-header-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\homepage-Everyday-Homepage-fa852--should-display-main-header-firefox\error-context.md
+
+
+[1A[2K[41/152] [firefox] › tests\homepage.spec.js:20:5 › Everyday Homepage › Page Layout & Header › should display footer with copyright and version
+[1A[2K[42/152] [firefox] › tests\homepage.spec.js:27:5 › Everyday Homepage › Page Layout & Header › should display welcome section by default
+[1A[2K  14) [firefox] › tests\homepage.spec.js:27:5 › Everyday Homepage › Page Layout & Header › should display welcome section by default 
+
+    [31mTest timeout of 30000ms exceeded while running "beforeEach" hook.[39m
+
+      3 | test.describe('Everyday Homepage', () => {
+      4 |   
+    > 5 |   test.beforeEach(async ({ page }) => {
+        |        ^
+      6 |     await page.goto('/Everyday.html');
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:5:8
+
+
+[1A[2K  15) [firefox] › tests\homepage.spec.js:20:5 › Everyday Homepage › Page Layout & Header › should display footer with copyright and version 
+
+    [31mTest timeout of 30000ms exceeded while running "beforeEach" hook.[39m
+
+      3 | test.describe('Everyday Homepage', () => {
+      4 |   
+    > 5 |   test.beforeEach(async ({ page }) => {
+        |        ^
+      6 |     await page.goto('/Everyday.html');
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:5:8
+
+    Error: page.goto: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - navigating to "http://localhost:8000/Everyday.html", waiting until "load"[22m
+
+
+      4 |   
+      5 |   test.beforeEach(async ({ page }) => {
+    > 6 |     await page.goto('/Everyday.html');
+        |                ^
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+      9 |
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:6:16
+
+    Error Context: test-results\homepage-Everyday-Homepage-01822--with-copyright-and-version-firefox\error-context.md
+
+
+[1A[2K[43/152] [firefox] › tests\homepage.spec.js:50:5 › Everyday Homepage › Sidebar Navigation › should display sidebar with all menu items
+[1A[2K[44/152] [firefox] › tests\homepage.spec.js:74:5 › Everyday Homepage › Sidebar Navigation › should navigate to Home section
+[1A[2K  16) [firefox] › tests\homepage.spec.js:50:5 › Everyday Homepage › Sidebar Navigation › should display sidebar with all menu items 
+
+    [31mTest timeout of 30000ms exceeded while running "beforeEach" hook.[39m
+
+      3 | test.describe('Everyday Homepage', () => {
+      4 |   
+    > 5 |   test.beforeEach(async ({ page }) => {
+        |        ^
+      6 |     await page.goto('/Everyday.html');
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:5:8
+
+    Error: page.goto: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - navigating to "http://localhost:8000/Everyday.html", waiting until "load"[22m
+
+
+      4 |   
+      5 |   test.beforeEach(async ({ page }) => {
+    > 6 |     await page.goto('/Everyday.html');
+        |                ^
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+      9 |
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:6:16
+
+    Error Context: test-results\homepage-Everyday-Homepage-3fd38-sidebar-with-all-menu-items-firefox\error-context.md
+
+
+[1A[2K[45/152] [firefox] › tests\homepage.spec.js:80:5 › Everyday Homepage › Sidebar Navigation › should navigate to Focus section
+[1A[2K  17) [firefox] › tests\homepage.spec.js:74:5 › Everyday Homepage › Sidebar Navigation › should navigate to Home section 
+
+    [31mTest timeout of 30000ms exceeded while running "beforeEach" hook.[39m
+
+      3 | test.describe('Everyday Homepage', () => {
+      4 |   
+    > 5 |   test.beforeEach(async ({ page }) => {
+        |        ^
+      6 |     await page.goto('/Everyday.html');
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:5:8
+
+    Error: page.goto: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - navigating to "http://localhost:8000/Everyday.html", waiting until "load"[22m
+
+
+      4 |   
+      5 |   test.beforeEach(async ({ page }) => {
+    > 6 |     await page.goto('/Everyday.html');
+        |                ^
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+      9 |
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:6:16
+
+    Error Context: test-results\homepage-Everyday-Homepage-4b219-ld-navigate-to-Home-section-firefox\error-context.md
+
+
+[1A[2K[46/152] [firefox] › tests\homepage.spec.js:90:5 › Everyday Homepage › Sidebar Navigation › should navigate to Flow section
+[1A[2K  18) [firefox] › tests\homepage.spec.js:90:5 › Everyday Homepage › Sidebar Navigation › should navigate to Flow section 
+
+    [31mTest timeout of 30000ms exceeded while running "beforeEach" hook.[39m
+
+      3 | test.describe('Everyday Homepage', () => {
+      4 |   
+    > 5 |   test.beforeEach(async ({ page }) => {
+        |        ^
+      6 |     await page.goto('/Everyday.html');
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:5:8
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\homepage-Everyday-Homepage-e1a8d-ld-navigate-to-Flow-section-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\homepage-Everyday-Homepage-e1a8d-ld-navigate-to-Flow-section-firefox\error-context.md
+
+
+[1A[2K  19) [firefox] › tests\homepage.spec.js:80:5 › Everyday Homepage › Sidebar Navigation › should navigate to Focus section 
+
+    [31mTest timeout of 30000ms exceeded while running "beforeEach" hook.[39m
+
+      3 | test.describe('Everyday Homepage', () => {
+      4 |   
+    > 5 |   test.beforeEach(async ({ page }) => {
+        |        ^
+      6 |     await page.goto('/Everyday.html');
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:5:8
+
+    Error: page.goto: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - navigating to "http://localhost:8000/Everyday.html", waiting until "load"[22m
+
+
+      4 |   
+      5 |   test.beforeEach(async ({ page }) => {
+    > 6 |     await page.goto('/Everyday.html');
+        |                ^
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+      9 |
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:6:16
+
+
+[1A[2K[47/152] [firefox] › tests\homepage.spec.js:100:5 › Everyday Homepage › Sidebar Navigation › should navigate to Share section
+[1A[2K[48/152] [firefox] › tests\homepage.spec.js:106:5 › Everyday Homepage › Sidebar Navigation › should navigate to Explore section
+[1A[2K  20) [firefox] › tests\homepage.spec.js:100:5 › Everyday Homepage › Sidebar Navigation › should navigate to Share section 
+
+    [31mTest timeout of 30000ms exceeded while running "beforeEach" hook.[39m
+
+      3 | test.describe('Everyday Homepage', () => {
+      4 |   
+    > 5 |   test.beforeEach(async ({ page }) => {
+        |        ^
+      6 |     await page.goto('/Everyday.html');
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:5:8
+
+    Error: page.goto: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - navigating to "http://localhost:8000/Everyday.html", waiting until "load"[22m
+
+
+      4 |   
+      5 |   test.beforeEach(async ({ page }) => {
+    > 6 |     await page.goto('/Everyday.html');
+        |                ^
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+      9 |
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:6:16
+
+
+[1A[2K[49/152] [firefox] › tests\homepage.spec.js:112:5 › Everyday Homepage › Sidebar Navigation › should navigate to Reminder section
+[1A[2K  21) [firefox] › tests\homepage.spec.js:106:5 › Everyday Homepage › Sidebar Navigation › should navigate to Explore section 
+
+    [31mTest timeout of 30000ms exceeded while running "beforeEach" hook.[39m
+
+      3 | test.describe('Everyday Homepage', () => {
+      4 |   
+    > 5 |   test.beforeEach(async ({ page }) => {
+        |        ^
+      6 |     await page.goto('/Everyday.html');
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:5:8
+
+    Error: page.goto: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - navigating to "http://localhost:8000/Everyday.html", waiting until "load"[22m
+
+
+      4 |   
+      5 |   test.beforeEach(async ({ page }) => {
+    > 6 |     await page.goto('/Everyday.html');
+        |                ^
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+      9 |
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:6:16
+
+    Error Context: test-results\homepage-Everyday-Homepage-f8148-navigate-to-Explore-section-firefox\error-context.md
+
+
+[1A[2K[50/152] [firefox] › tests\homepage.spec.js:118:5 › Everyday Homepage › Sidebar Navigation › should navigate to Kontakt section via footer
+[1A[2K  22) [firefox] › tests\homepage.spec.js:112:5 › Everyday Homepage › Sidebar Navigation › should navigate to Reminder section 
+
+    [31mTest timeout of 30000ms exceeded while running "beforeEach" hook.[39m
+
+      3 | test.describe('Everyday Homepage', () => {
+      4 |   
+    > 5 |   test.beforeEach(async ({ page }) => {
+        |        ^
+      6 |     await page.goto('/Everyday.html');
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:5:8
+
+    Error: page.goto: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - navigating to "http://localhost:8000/Everyday.html", waiting until "load"[22m
+
+
+      4 |   
+      5 |   test.beforeEach(async ({ page }) => {
+    > 6 |     await page.goto('/Everyday.html');
+        |                ^
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+      9 |
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:6:16
+
+    Error Context: test-results\homepage-Everyday-Homepage-9e41d-avigate-to-Reminder-section-firefox\error-context.md
+
+
+[1A[2K  23) [firefox] › tests\homepage.spec.js:118:5 › Everyday Homepage › Sidebar Navigation › should navigate to Kontakt section via footer 
+
+    [31mTest timeout of 30000ms exceeded while running "beforeEach" hook.[39m
+
+      3 | test.describe('Everyday Homepage', () => {
+      4 |   
+    > 5 |   test.beforeEach(async ({ page }) => {
+        |        ^
+      6 |     await page.goto('/Everyday.html');
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:5:8
+
+    Error: page.goto: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - navigating to "http://localhost:8000/Everyday.html", waiting until "load"[22m
+
+
+      4 |   
+      5 |   test.beforeEach(async ({ page }) => {
+    > 6 |     await page.goto('/Everyday.html');
+        |                ^
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+      9 |
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:6:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\homepage-Everyday-Homepage-555ba--Kontakt-section-via-footer-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\homepage-Everyday-Homepage-555ba--Kontakt-section-via-footer-firefox\error-context.md
+
+
+[1A[2K[51/152] [firefox] › tests\homepage.spec.js:126:5 › Everyday Homepage › Mobile Menu Toggle › should display menu toggle button on mobile
+[1A[2K[52/152] [firefox] › tests\homepage.spec.js:132:5 › Everyday Homepage › Mobile Menu Toggle › should toggle sidebar on mobile click
+[1A[2K  24) [firefox] › tests\homepage.spec.js:132:5 › Everyday Homepage › Mobile Menu Toggle › should toggle sidebar on mobile click 
+
+    Error: page.goto: NS_ERROR_CONNECTION_REFUSED
+    Call log:
+    [2m  - navigating to "http://localhost:8000/Everyday.html", waiting until "load"[22m
+
+
+      4 |   
+      5 |   test.beforeEach(async ({ page }) => {
+    > 6 |     await page.goto('/Everyday.html');
+        |                ^
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+      9 |
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:6:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\homepage-Everyday-Homepage-7b1ca-gle-sidebar-on-mobile-click-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\homepage-Everyday-Homepage-7b1ca-gle-sidebar-on-mobile-click-firefox\error-context.md
+
+
+[1A[2K  25) [firefox] › tests\homepage.spec.js:126:5 › Everyday Homepage › Mobile Menu Toggle › should display menu toggle button on mobile 
+
+    Error: page.goto: NS_ERROR_CONNECTION_REFUSED
+    Call log:
+    [2m  - navigating to "http://localhost:8000/Everyday.html", waiting until "load"[22m
+
+
+      4 |   
+      5 |   test.beforeEach(async ({ page }) => {
+    > 6 |     await page.goto('/Everyday.html');
+        |                ^
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+      9 |
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:6:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\homepage-Everyday-Homepage-e1458-enu-toggle-button-on-mobile-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[1A[2K[53/152] [firefox] › tests\homepage.spec.js:149:5 › Everyday Homepage › Mobile Menu Toggle › should toggle sidebar multiple times
+[1A[2K[54/152] [firefox] › tests\homepage.spec.js:176:5 › Everyday Homepage › Content Display › Flow section should display exercises with videos
+[1A[2K  26) [firefox] › tests\homepage.spec.js:149:5 › Everyday Homepage › Mobile Menu Toggle › should toggle sidebar multiple times 
+
+    Error: page.goto: NS_ERROR_CONNECTION_REFUSED
+    Call log:
+    [2m  - navigating to "http://localhost:8000/Everyday.html", waiting until "load"[22m
+
+
+      4 |   
+      5 |   test.beforeEach(async ({ page }) => {
+    > 6 |     await page.goto('/Everyday.html');
+        |                ^
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+      9 |
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:6:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\homepage-Everyday-Homepage-ea1b7-ggle-sidebar-multiple-times-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\homepage-Everyday-Homepage-ea1b7-ggle-sidebar-multiple-times-firefox\error-context.md
+
+
+[1A[2K[55/152] [firefox] › tests\homepage.spec.js:191:5 › Everyday Homepage › Content Display › Flow section should display exercise images
+[1A[2K  27) [firefox] › tests\homepage.spec.js:176:5 › Everyday Homepage › Content Display › Flow section should display exercises with videos 
+
+    Error: page.goto: NS_ERROR_CONNECTION_REFUSED
+    Call log:
+    [2m  - navigating to "http://localhost:8000/Everyday.html", waiting until "load"[22m
+
+
+      4 |   
+      5 |   test.beforeEach(async ({ page }) => {
+    > 6 |     await page.goto('/Everyday.html');
+        |                ^
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+      9 |
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:6:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\homepage-Everyday-Homepage-077c3-splay-exercises-with-videos-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\homepage-Everyday-Homepage-077c3-splay-exercises-with-videos-firefox\error-context.md
+
+
+[1A[2K[56/152] [firefox] › tests\homepage.spec.js:200:5 › Everyday Homepage › Content Display › Focus section should display reflection content
+[1A[2K  28) [firefox] › tests\homepage.spec.js:191:5 › Everyday Homepage › Content Display › Flow section should display exercise images 
+
+    Error: page.goto: NS_ERROR_CONNECTION_REFUSED
+    Call log:
+    [2m  - navigating to "http://localhost:8000/Everyday.html", waiting until "load"[22m
+
+
+      4 |   
+      5 |   test.beforeEach(async ({ page }) => {
+    > 6 |     await page.goto('/Everyday.html');
+        |                ^
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+      9 |
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:6:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\homepage-Everyday-Homepage-4837a-uld-display-exercise-images-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\homepage-Everyday-Homepage-4837a-uld-display-exercise-images-firefox\error-context.md
+
+
+[1A[2K  29) [firefox] › tests\homepage.spec.js:200:5 › Everyday Homepage › Content Display › Focus section should display reflection content 
+
+    Error: page.goto: NS_ERROR_CONNECTION_REFUSED
+    Call log:
+    [2m  - navigating to "http://localhost:8000/Everyday.html", waiting until "load"[22m
+
+
+      4 |   
+      5 |   test.beforeEach(async ({ page }) => {
+    > 6 |     await page.goto('/Everyday.html');
+        |                ^
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+      9 |
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:6:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\homepage-Everyday-Homepage-c96fe--display-reflection-content-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\homepage-Everyday-Homepage-c96fe--display-reflection-content-firefox\error-context.md
+
+
+[1A[2K[57/152] [firefox] › tests\homepage.spec.js:222:5 › Everyday Homepage › Reminder Functionality › should display Reminder section with input fields
+[1A[2K[58/152] [firefox] › tests\homepage.spec.js:230:5 › Everyday Homepage › Reminder Functionality › should have reminder list elements
+[1A[2K  30) [firefox] › tests\homepage.spec.js:230:5 › Everyday Homepage › Reminder Functionality › should have reminder list elements 
+
+    Error: page.goto: NS_ERROR_CONNECTION_REFUSED
+    Call log:
+    [2m  - navigating to "http://localhost:8000/Everyday.html", waiting until "load"[22m
+
+
+      4 |   
+      5 |   test.beforeEach(async ({ page }) => {
+    > 6 |     await page.goto('/Everyday.html');
+        |                ^
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+      9 |
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:6:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\homepage-Everyday-Homepage-825e8-have-reminder-list-elements-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\homepage-Everyday-Homepage-825e8-have-reminder-list-elements-firefox\error-context.md
+
+
+[1A[2K  31) [firefox] › tests\homepage.spec.js:222:5 › Everyday Homepage › Reminder Functionality › should display Reminder section with input fields 
+
+    Error: page.goto: NS_ERROR_CONNECTION_REFUSED
+    Call log:
+    [2m  - navigating to "http://localhost:8000/Everyday.html", waiting until "load"[22m
+
+
+      4 |   
+      5 |   test.beforeEach(async ({ page }) => {
+    > 6 |     await page.goto('/Everyday.html');
+        |                ^
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+      9 |
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:6:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\homepage-Everyday-Homepage-84642-r-section-with-input-fields-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\homepage-Everyday-Homepage-84642-r-section-with-input-fields-firefox\error-context.md
+
+
+[1A[2K[59/152] [firefox] › tests\homepage.spec.js:244:5 › Everyday Homepage › Responsive Design › should be responsive on desktop
+[1A[2K[60/152] [firefox] › tests\homepage.spec.js:250:5 › Everyday Homepage › Responsive Design › should be responsive on tablet
+[1A[2K  32) [firefox] › tests\homepage.spec.js:250:5 › Everyday Homepage › Responsive Design › should be responsive on tablet 
+
+    Error: page.goto: NS_ERROR_CONNECTION_REFUSED
+    Call log:
+    [2m  - navigating to "http://localhost:8000/Everyday.html", waiting until "load"[22m
+
+
+      4 |   
+      5 |   test.beforeEach(async ({ page }) => {
+    > 6 |     await page.goto('/Everyday.html');
+        |                ^
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+      9 |
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:6:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\homepage-Everyday-Homepage-8de3c-uld-be-responsive-on-tablet-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\homepage-Everyday-Homepage-8de3c-uld-be-responsive-on-tablet-firefox\error-context.md
+
+
+[1A[2K[61/152] [firefox] › tests\homepage.spec.js:256:5 › Everyday Homepage › Responsive Design › should be responsive on mobile
+[1A[2K  33) [firefox] › tests\homepage.spec.js:244:5 › Everyday Homepage › Responsive Design › should be responsive on desktop 
+
+    Error: page.goto: NS_ERROR_CONNECTION_REFUSED
+    Call log:
+    [2m  - navigating to "http://localhost:8000/Everyday.html", waiting until "load"[22m
+
+
+      4 |   
+      5 |   test.beforeEach(async ({ page }) => {
+    > 6 |     await page.goto('/Everyday.html');
+        |                ^
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+      9 |
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:6:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\homepage-Everyday-Homepage-375b7-ld-be-responsive-on-desktop-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\homepage-Everyday-Homepage-375b7-ld-be-responsive-on-desktop-firefox\error-context.md
+
+
+[1A[2K  34) [firefox] › tests\homepage.spec.js:256:5 › Everyday Homepage › Responsive Design › should be responsive on mobile 
+
+    [31mTest timeout of 30000ms exceeded.[39m
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\homepage-Everyday-Homepage-6eecf-uld-be-responsive-on-mobile-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\homepage-Everyday-Homepage-6eecf-uld-be-responsive-on-mobile-firefox\error-context.md
+
+
+[1A[2K[62/152] [firefox] › tests\homepage.spec.js:262:5 › Everyday Homepage › Responsive Design › should maintain content visibility on all viewports
+[1A[2K[63/152] [firefox] › tests\homepage.spec.js:284:5 › Everyday Homepage › CSS & Styling › should load stylesheet
+[1A[2K  35) [firefox] › tests\homepage.spec.js:262:5 › Everyday Homepage › Responsive Design › should maintain content visibility on all viewports 
+
+    [31mTest timeout of 30000ms exceeded while running "beforeEach" hook.[39m
+
+      3 | test.describe('Everyday Homepage', () => {
+      4 |   
+    > 5 |   test.beforeEach(async ({ page }) => {
+        |        ^
+      6 |     await page.goto('/Everyday.html');
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:5:8
+
+
+[1A[2K  36) [firefox] › tests\homepage.spec.js:284:5 › Everyday Homepage › CSS & Styling › should load stylesheet 
+
+    [31mTest timeout of 30000ms exceeded while running "beforeEach" hook.[39m
+
+      3 | test.describe('Everyday Homepage', () => {
+      4 |   
+    > 5 |   test.beforeEach(async ({ page }) => {
+        |        ^
+      6 |     await page.goto('/Everyday.html');
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:5:8
+
+    Error: page.goto: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - navigating to "http://localhost:8000/Everyday.html", waiting until "load"[22m
+
+
+      4 |   
+      5 |   test.beforeEach(async ({ page }) => {
+    > 6 |     await page.goto('/Everyday.html');
+        |                ^
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+      9 |
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:6:16
+
+    Error Context: test-results\homepage-Everyday-Homepage-3e6cc-ling-should-load-stylesheet-firefox\error-context.md
+
+
+[1A[2K[64/152] [firefox] › tests\homepage.spec.js:289:5 › Everyday Homepage › CSS & Styling › should load Font Awesome icons
+[1A[2K[65/152] [firefox] › tests\homepage.spec.js:294:5 › Everyday Homepage › CSS & Styling › should load Google Fonts
+[1A[2K  37) [firefox] › tests\homepage.spec.js:289:5 › Everyday Homepage › CSS & Styling › should load Font Awesome icons 
+
+    Error: page.goto: NS_ERROR_CONNECTION_REFUSED
+    Call log:
+    [2m  - navigating to "http://localhost:8000/Everyday.html", waiting until "load"[22m
+
+
+      4 |   
+      5 |   test.beforeEach(async ({ page }) => {
+    > 6 |     await page.goto('/Everyday.html');
+        |                ^
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+      9 |
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:6:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\homepage-Everyday-Homepage-125e7-uld-load-Font-Awesome-icons-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\homepage-Everyday-Homepage-125e7-uld-load-Font-Awesome-icons-firefox\error-context.md
+
+
+[1A[2K  38) [firefox] › tests\homepage.spec.js:294:5 › Everyday Homepage › CSS & Styling › should load Google Fonts 
+
+    Error: page.goto: NS_ERROR_CONNECTION_REFUSED
+    Call log:
+    [2m  - navigating to "http://localhost:8000/Everyday.html", waiting until "load"[22m
+
+
+      4 |   
+      5 |   test.beforeEach(async ({ page }) => {
+    > 6 |     await page.goto('/Everyday.html');
+        |                ^
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+      9 |
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:6:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\homepage-Everyday-Homepage-634cb-ng-should-load-Google-Fonts-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\homepage-Everyday-Homepage-634cb-ng-should-load-Google-Fonts-firefox\error-context.md
+
+
+[1A[2K[66/152] [firefox] › tests\homepage.spec.js:300:5 › Everyday Homepage › CSS & Styling › should have icons in navigation buttons
+[1A[2K[67/152] [firefox] › tests\homepage.spec.js:308:5 › Everyday Homepage › Accessibility › should have proper semantic HTML structure
+[1A[2K  39) [firefox] › tests\homepage.spec.js:300:5 › Everyday Homepage › CSS & Styling › should have icons in navigation buttons 
+
+    [31mTest timeout of 30000ms exceeded while running "beforeEach" hook.[39m
+
+      3 | test.describe('Everyday Homepage', () => {
+      4 |   
+    > 5 |   test.beforeEach(async ({ page }) => {
+        |        ^
+      6 |     await page.goto('/Everyday.html');
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:5:8
+
+    Error: page.goto: NS_ERROR_CONNECTION_REFUSED
+    Call log:
+    [2m  - navigating to "http://localhost:8000/Everyday.html", waiting until "load"[22m
+
+
+      4 |   
+      5 |   test.beforeEach(async ({ page }) => {
+    > 6 |     await page.goto('/Everyday.html');
+        |                ^
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+      9 |
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:6:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\homepage-Everyday-Homepage-c4408-icons-in-navigation-buttons-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\homepage-Everyday-Homepage-c4408-icons-in-navigation-buttons-firefox\error-context.md
+
+
+[1A[2K  40) [firefox] › tests\homepage.spec.js:308:5 › Everyday Homepage › Accessibility › should have proper semantic HTML structure 
+
+    [31mTest timeout of 30000ms exceeded while running "beforeEach" hook.[39m
+
+      3 | test.describe('Everyday Homepage', () => {
+      4 |   
+    > 5 |   test.beforeEach(async ({ page }) => {
+        |        ^
+      6 |     await page.goto('/Everyday.html');
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:5:8
+
+    Error: page.goto: NS_ERROR_CONNECTION_REFUSED
+    Call log:
+    [2m  - navigating to "http://localhost:8000/Everyday.html", waiting until "load"[22m
+
+
+      4 |   
+      5 |   test.beforeEach(async ({ page }) => {
+    > 6 |     await page.goto('/Everyday.html');
+        |                ^
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+      9 |
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:6:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\homepage-Everyday-Homepage-3f9c5-per-semantic-HTML-structure-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\homepage-Everyday-Homepage-3f9c5-per-semantic-HTML-structure-firefox\error-context.md
+
+
+[1A[2K[68/152] [firefox] › tests\homepage.spec.js:318:5 › Everyday Homepage › Accessibility › should have language attribute on html element
+[1A[2K[69/152] [firefox] › tests\homepage.spec.js:324:5 › Everyday Homepage › Accessibility › should have proper heading hierarchy in sections
+[1A[2K  41) [firefox] › tests\homepage.spec.js:318:5 › Everyday Homepage › Accessibility › should have language attribute on html element 
+
+    Error: page.goto: NS_ERROR_CONNECTION_REFUSED
+    Call log:
+    [2m  - navigating to "http://localhost:8000/Everyday.html", waiting until "load"[22m
+
+
+      4 |   
+      5 |   test.beforeEach(async ({ page }) => {
+    > 6 |     await page.goto('/Everyday.html');
+        |                ^
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+      9 |
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:6:16
+
+    Error Context: test-results\homepage-Everyday-Homepage-35155-e-attribute-on-html-element-firefox\error-context.md
+
+
+[1A[2K[70/152] [firefox] › tests\homepage.spec.js:332:5 › Everyday Homepage › Accessibility › should have meta viewport tag
+[1A[2K  42) [firefox] › tests\homepage.spec.js:324:5 › Everyday Homepage › Accessibility › should have proper heading hierarchy in sections 
+
+    Error: page.goto: NS_ERROR_CONNECTION_REFUSED
+    Call log:
+    [2m  - navigating to "http://localhost:8000/Everyday.html", waiting until "load"[22m
+
+
+      4 |   
+      5 |   test.beforeEach(async ({ page }) => {
+    > 6 |     await page.goto('/Everyday.html');
+        |                ^
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+      9 |
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:6:16
+
+    Error Context: test-results\homepage-Everyday-Homepage-38b9c-ading-hierarchy-in-sections-firefox\error-context.md
+
+
+[1A[2K[71/152] [firefox] › tests\homepage.spec.js:337:5 › Everyday Homepage › Accessibility › should have proper character encoding
+[1A[2K  43) [firefox] › tests\homepage.spec.js:337:5 › Everyday Homepage › Accessibility › should have proper character encoding 
+
+    Error: page.goto: NS_ERROR_CONNECTION_REFUSED
+    Call log:
+    [2m  - navigating to "http://localhost:8000/Everyday.html", waiting until "load"[22m
+
+
+      4 |   
+      5 |   test.beforeEach(async ({ page }) => {
+    > 6 |     await page.goto('/Everyday.html');
+        |                ^
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+      9 |
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:6:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\homepage-Everyday-Homepage-5218c-e-proper-character-encoding-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\homepage-Everyday-Homepage-5218c-e-proper-character-encoding-firefox\error-context.md
+
+
+[1A[2K  44) [firefox] › tests\homepage.spec.js:332:5 › Everyday Homepage › Accessibility › should have meta viewport tag 
+
+    Error: page.goto: NS_ERROR_CONNECTION_REFUSED
+    Call log:
+    [2m  - navigating to "http://localhost:8000/Everyday.html", waiting until "load"[22m
+
+
+      4 |   
+      5 |   test.beforeEach(async ({ page }) => {
+    > 6 |     await page.goto('/Everyday.html');
+        |                ^
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+      9 |
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:6:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\homepage-Everyday-Homepage-fe7c9-ould-have-meta-viewport-tag-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\homepage-Everyday-Homepage-fe7c9-ould-have-meta-viewport-tag-firefox\error-context.md
+
+
+[1A[2K[72/152] [firefox] › tests\homepage.spec.js:359:5 › Everyday Homepage › Navigation Button Interactions › should highlight/interact with Focus button
+[1A[2K[73/152] [firefox] › tests\homepage.spec.js:367:5 › Everyday Homepage › Navigation Button Interactions › should allow rapid section switching
+[1A[2K  45) [firefox] › tests\homepage.spec.js:359:5 › Everyday Homepage › Navigation Button Interactions › should highlight/interact with Focus button 
+
+    [31mTest timeout of 30000ms exceeded while running "beforeEach" hook.[39m
+
+      3 | test.describe('Everyday Homepage', () => {
+      4 |   
+    > 5 |   test.beforeEach(async ({ page }) => {
+        |        ^
+      6 |     await page.goto('/Everyday.html');
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:5:8
+
+    Error: page.goto: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - navigating to "http://localhost:8000/Everyday.html", waiting until "load"[22m
+
+
+      4 |   
+      5 |   test.beforeEach(async ({ page }) => {
+    > 6 |     await page.goto('/Everyday.html');
+        |                ^
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+      9 |
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:6:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\homepage-Everyday-Homepage-e174e--interact-with-Focus-button-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[1A[2K[74/152] [firefox] › tests\homepage.spec.js:391:5 › Everyday Homepage › Navigation Button Interactions › should switch between sections smoothly
+[1A[2K  46) [firefox] › tests\homepage.spec.js:367:5 › Everyday Homepage › Navigation Button Interactions › should allow rapid section switching 
+
+    [31mTest timeout of 30000ms exceeded while running "beforeEach" hook.[39m
+
+      3 | test.describe('Everyday Homepage', () => {
+      4 |   
+    > 5 |   test.beforeEach(async ({ page }) => {
+        |        ^
+      6 |     await page.goto('/Everyday.html');
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:5:8
+
+    Error: page.goto: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - navigating to "http://localhost:8000/Everyday.html", waiting until "load"[22m
+
+
+      4 |   
+      5 |   test.beforeEach(async ({ page }) => {
+    > 6 |     await page.goto('/Everyday.html');
+        |                ^
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+      9 |
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:6:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\homepage-Everyday-Homepage-e031f-low-rapid-section-switching-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[1A[2K[75/152] [firefox] › tests\homepage.spec.js:424:5 › Everyday Homepage › Flow Exercise Content › should display all Flow exercises
+[1A[2K  47) [firefox] › tests\homepage.spec.js:391:5 › Everyday Homepage › Navigation Button Interactions › should switch between sections smoothly 
+
+    Error: page.goto: NS_ERROR_CONNECTION_REFUSED
+    Call log:
+    [2m  - navigating to "http://localhost:8000/Everyday.html", waiting until "load"[22m
+
+
+      4 |   
+      5 |   test.beforeEach(async ({ page }) => {
+    > 6 |     await page.goto('/Everyday.html');
+        |                ^
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+      9 |
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:6:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\homepage-Everyday-Homepage-e8bc3-h-between-sections-smoothly-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\homepage-Everyday-Homepage-e8bc3-h-between-sections-smoothly-firefox\error-context.md
+
+
+[1A[2K[76/152] [firefox] › tests\homepage.spec.js:447:5 › Everyday Homepage › Flow Exercise Content › should have exercise descriptions
+[1A[2K  48) [firefox] › tests\homepage.spec.js:424:5 › Everyday Homepage › Flow Exercise Content › should display all Flow exercises 
+
+    Error: page.goto: NS_ERROR_CONNECTION_REFUSED
+    Call log:
+    [2m  - navigating to "http://localhost:8000/Everyday.html", waiting until "load"[22m
+
+
+      4 |   
+      5 |   test.beforeEach(async ({ page }) => {
+    > 6 |     await page.goto('/Everyday.html');
+        |                ^
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+      9 |
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:6:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\homepage-Everyday-Homepage-1df27--display-all-Flow-exercises-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\homepage-Everyday-Homepage-1df27--display-all-Flow-exercises-firefox\error-context.md
+
+
+[1A[2K  49) [firefox] › tests\homepage.spec.js:447:5 › Everyday Homepage › Flow Exercise Content › should have exercise descriptions 
+
+    Error: page.goto: NS_ERROR_CONNECTION_REFUSED
+    Call log:
+    [2m  - navigating to "http://localhost:8000/Everyday.html", waiting until "load"[22m
+
+
+      4 |   
+      5 |   test.beforeEach(async ({ page }) => {
+    > 6 |     await page.goto('/Everyday.html');
+        |                ^
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+      9 |
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:6:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\homepage-Everyday-Homepage-886bd--have-exercise-descriptions-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\homepage-Everyday-Homepage-886bd--have-exercise-descriptions-firefox\error-context.md
+
+
+[1A[2K[77/152] [webkit] › tests\homepage.spec.js:11:5 › Everyday Homepage › Page Layout & Header › should load the homepage successfully
+[1A[2K[78/152] [webkit] › tests\homepage.spec.js:15:5 › Everyday Homepage › Page Layout & Header › should display main header
+[1A[2K  50) [webkit] › tests\homepage.spec.js:11:5 › Everyday Homepage › Page Layout & Header › should load the homepage successfully 
+
+    Error: page.goto: Could not connect to server
+    Call log:
+    [2m  - navigating to "http://localhost:8000/Everyday.html", waiting until "load"[22m
+
+
+      4 |   
+      5 |   test.beforeEach(async ({ page }) => {
+    > 6 |     await page.goto('/Everyday.html');
+        |                ^
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+      9 |
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:6:16
+
+
+[1A[2K  51) [webkit] › tests\homepage.spec.js:15:5 › Everyday Homepage › Page Layout & Header › should display main header 
+
+    Error: page.goto: Could not connect to server
+    Call log:
+    [2m  - navigating to "http://localhost:8000/Everyday.html", waiting until "load"[22m
+
+
+      4 |   
+      5 |   test.beforeEach(async ({ page }) => {
+    > 6 |     await page.goto('/Everyday.html');
+        |                ^
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+      9 |
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:6:16
+
+
+[1A[2K[79/152] [webkit] › tests\homepage.spec.js:20:5 › Everyday Homepage › Page Layout & Header › should display footer with copyright and version
+[1A[2K[80/152] [webkit] › tests\homepage.spec.js:27:5 › Everyday Homepage › Page Layout & Header › should display welcome section by default
+[1A[2K  52) [webkit] › tests\homepage.spec.js:27:5 › Everyday Homepage › Page Layout & Header › should display welcome section by default 
+
+    Error: page.goto: Could not connect to server
+    Call log:
+    [2m  - navigating to "http://localhost:8000/Everyday.html", waiting until "load"[22m
+
+
+      4 |   
+      5 |   test.beforeEach(async ({ page }) => {
+    > 6 |     await page.goto('/Everyday.html');
+        |                ^
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+      9 |
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:6:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\homepage-Everyday-Homepage-abbd2--welcome-section-by-default-webkit\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[1A[2K  53) [webkit] › tests\homepage.spec.js:20:5 › Everyday Homepage › Page Layout & Header › should display footer with copyright and version 
+
+    Error: page.goto: Could not connect to server
+    Call log:
+    [2m  - navigating to "http://localhost:8000/Everyday.html", waiting until "load"[22m
+
+
+      4 |   
+      5 |   test.beforeEach(async ({ page }) => {
+    > 6 |     await page.goto('/Everyday.html');
+        |                ^
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+      9 |
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:6:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\homepage-Everyday-Homepage-01822--with-copyright-and-version-webkit\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[1A[2K[81/152] [webkit] › tests\homepage.spec.js:74:5 › Everyday Homepage › Sidebar Navigation › should navigate to Home section
+[1A[2K[82/152] [webkit] › tests\homepage.spec.js:50:5 › Everyday Homepage › Sidebar Navigation › should display sidebar with all menu items
+[1A[2K  54) [webkit] › tests\homepage.spec.js:74:5 › Everyday Homepage › Sidebar Navigation › should navigate to Home section 
+
+    Error: page.goto: Could not connect to server
+    Call log:
+    [2m  - navigating to "http://localhost:8000/Everyday.html", waiting until "load"[22m
+
+
+      4 |   
+      5 |   test.beforeEach(async ({ page }) => {
+    > 6 |     await page.goto('/Everyday.html');
+        |                ^
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+      9 |
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:6:16
+
+
+[1A[2K  55) [webkit] › tests\homepage.spec.js:50:5 › Everyday Homepage › Sidebar Navigation › should display sidebar with all menu items 
+
+    Error: page.goto: Could not connect to server
+    Call log:
+    [2m  - navigating to "http://localhost:8000/Everyday.html", waiting until "load"[22m
+
+
+      4 |   
+      5 |   test.beforeEach(async ({ page }) => {
+    > 6 |     await page.goto('/Everyday.html');
+        |                ^
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+      9 |
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:6:16
+
+
+[1A[2K[83/152] [webkit] › tests\homepage.spec.js:90:5 › Everyday Homepage › Sidebar Navigation › should navigate to Flow section
+[1A[2K[84/152] [webkit] › tests\homepage.spec.js:80:5 › Everyday Homepage › Sidebar Navigation › should navigate to Focus section
+[1A[2K  56) [webkit] › tests\homepage.spec.js:80:5 › Everyday Homepage › Sidebar Navigation › should navigate to Focus section 
+
+    Error: page.goto: Could not connect to server
+    Call log:
+    [2m  - navigating to "http://localhost:8000/Everyday.html", waiting until "load"[22m
+
+
+      4 |   
+      5 |   test.beforeEach(async ({ page }) => {
+    > 6 |     await page.goto('/Everyday.html');
+        |                ^
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+      9 |
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:6:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\homepage-Everyday-Homepage-0f1b8-d-navigate-to-Focus-section-webkit\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[1A[2K  57) [webkit] › tests\homepage.spec.js:90:5 › Everyday Homepage › Sidebar Navigation › should navigate to Flow section 
+
+    Error: page.goto: Could not connect to server
+    Call log:
+    [2m  - navigating to "http://localhost:8000/Everyday.html", waiting until "load"[22m
+
+
+      4 |   
+      5 |   test.beforeEach(async ({ page }) => {
+    > 6 |     await page.goto('/Everyday.html');
+        |                ^
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+      9 |
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:6:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\homepage-Everyday-Homepage-e1a8d-ld-navigate-to-Flow-section-webkit\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[1A[2K[85/152] [webkit] › tests\homepage.spec.js:100:5 › Everyday Homepage › Sidebar Navigation › should navigate to Share section
+[1A[2K[86/152] [webkit] › tests\homepage.spec.js:106:5 › Everyday Homepage › Sidebar Navigation › should navigate to Explore section
+[1A[2K  58) [webkit] › tests\homepage.spec.js:100:5 › Everyday Homepage › Sidebar Navigation › should navigate to Share section 
+
+    Error: page.goto: Could not connect to server
+    Call log:
+    [2m  - navigating to "http://localhost:8000/Everyday.html", waiting until "load"[22m
+
+
+      4 |   
+      5 |   test.beforeEach(async ({ page }) => {
+    > 6 |     await page.goto('/Everyday.html');
+        |                ^
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+      9 |
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:6:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\homepage-Everyday-Homepage-a3063-d-navigate-to-Share-section-webkit\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[1A[2K  59) [webkit] › tests\homepage.spec.js:106:5 › Everyday Homepage › Sidebar Navigation › should navigate to Explore section 
+
+    [31mTest timeout of 30000ms exceeded.[39m
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('button[data-section="Explore"]')[22m
+    [2m    - locator resolved to <button type="button" class="menu-btn" data-section="Explore">…</button>[22m
+    [2m  - attempting click action[22m
+    [2m    - waiting for element to be visible, enabled and stable[22m
+    [2m    - element is visible, enabled and stable[22m
+    [2m    - scrolling into view if needed[22m
+    [2m    - done scrolling[22m
+    [2m    - performing click action[22m
+
+
+      60 |       await button.waitFor({ state: 'visible', timeout: 5000 });
+      61 |       await page.waitForTimeout(200); // Small delay for rendering
+    > 62 |       await button.click();
+         |                    ^
+      63 |       
+      64 |       // Wait for the section to load and DOM to update
+      65 |       await page.waitForSelector(`#sectionTitle`, { timeout: 5000 });
+        at navigateToSection (C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:62:20)
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:141:7
+
+    Error Context: test-results\homepage-Everyday-Homepage-f8148-navigate-to-Explore-section-webkit\error-context.md
+
+
+[1A[2K[87/152] [webkit] › tests\homepage.spec.js:112:5 › Everyday Homepage › Sidebar Navigation › should navigate to Reminder section
+[1A[2K  60) [webkit] › tests\homepage.spec.js:112:5 › Everyday Homepage › Sidebar Navigation › should navigate to Reminder section 
+
+    [31mTest timeout of 30000ms exceeded while running "beforeEach" hook.[39m
+
+      3 | test.describe('Everyday Homepage', () => {
+      4 |   
+    > 5 |   test.beforeEach(async ({ page }) => {
+        |        ^
+      6 |     await page.goto('/Everyday.html');
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:5:8
+
+    Error: browserContext.newPage: Test timeout of 30000ms exceeded.
+
+
+[1A[2K[88/152] [webkit] › tests\homepage.spec.js:118:5 › Everyday Homepage › Sidebar Navigation › should navigate to Kontakt section via footer
+[1A[2K[89/152] [webkit] › tests\homepage.spec.js:126:5 › Everyday Homepage › Mobile Menu Toggle › should display menu toggle button on mobile
+[1A[2K  61) [webkit] › tests\homepage.spec.js:118:5 › Everyday Homepage › Sidebar Navigation › should navigate to Kontakt section via footer 
+
+    [31mTest timeout of 30000ms exceeded while running "beforeEach" hook.[39m
+
+      3 | test.describe('Everyday Homepage', () => {
+      4 |   
+    > 5 |   test.beforeEach(async ({ page }) => {
+        |        ^
+      6 |     await page.goto('/Everyday.html');
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:5:8
+
+    Error Context: test-results\homepage-Everyday-Homepage-555ba--Kontakt-section-via-footer-webkit\error-context.md
+
+
+[1A[2K  62) [webkit] › tests\homepage.spec.js:126:5 › Everyday Homepage › Mobile Menu Toggle › should display menu toggle button on mobile 
+
+    [31mTest timeout of 30000ms exceeded while running "beforeEach" hook.[39m
+
+      3 | test.describe('Everyday Homepage', () => {
+      4 |   
+    > 5 |   test.beforeEach(async ({ page }) => {
+        |        ^
+      6 |     await page.goto('/Everyday.html');
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:5:8
+
+    Error: page.goto: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - navigating to "http://localhost:8000/Everyday.html", waiting until "load"[22m
+
+
+      4 |   
+      5 |   test.beforeEach(async ({ page }) => {
+    > 6 |     await page.goto('/Everyday.html');
+        |                ^
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+      9 |
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:6:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\homepage-Everyday-Homepage-e1458-enu-toggle-button-on-mobile-webkit\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[1A[2K[90/152] [webkit] › tests\homepage.spec.js:132:5 › Everyday Homepage › Mobile Menu Toggle › should toggle sidebar on mobile click
+[1A[2K[91/152] [webkit] › tests\homepage.spec.js:149:5 › Everyday Homepage › Mobile Menu Toggle › should toggle sidebar multiple times
+[1A[2K  63) [webkit] › tests\homepage.spec.js:132:5 › Everyday Homepage › Mobile Menu Toggle › should toggle sidebar on mobile click 
+
+    [31mTest timeout of 30000ms exceeded while running "beforeEach" hook.[39m
+
+      3 | test.describe('Everyday Homepage', () => {
+      4 |   
+    > 5 |   test.beforeEach(async ({ page }) => {
+        |        ^
+      6 |     await page.goto('/Everyday.html');
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:5:8
+
+    Error: page.goto: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - navigating to "http://localhost:8000/Everyday.html", waiting until "load"[22m
+
+
+      4 |   
+      5 |   test.beforeEach(async ({ page }) => {
+    > 6 |     await page.goto('/Everyday.html');
+        |                ^
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+      9 |
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:6:16
+
+
+[1A[2K  64) [webkit] › tests\homepage.spec.js:149:5 › Everyday Homepage › Mobile Menu Toggle › should toggle sidebar multiple times 
+
+    [31mTest timeout of 30000ms exceeded while running "beforeEach" hook.[39m
+
+      3 | test.describe('Everyday Homepage', () => {
+      4 |   
+    > 5 |   test.beforeEach(async ({ page }) => {
+        |        ^
+      6 |     await page.goto('/Everyday.html');
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:5:8
+
+    Error: browserContext.newPage: Test timeout of 30000ms exceeded.
+
+
+[1A[2K[92/152] [webkit] › tests\homepage.spec.js:176:5 › Everyday Homepage › Content Display › Flow section should display exercises with videos
+[1A[2K[93/152] [webkit] › tests\homepage.spec.js:191:5 › Everyday Homepage › Content Display › Flow section should display exercise images
+[1A[2K  65) [webkit] › tests\homepage.spec.js:176:5 › Everyday Homepage › Content Display › Flow section should display exercises with videos 
+
+    [31mTest timeout of 30000ms exceeded while running "beforeEach" hook.[39m
+
+      3 | test.describe('Everyday Homepage', () => {
+      4 |   
+    > 5 |   test.beforeEach(async ({ page }) => {
+        |        ^
+      6 |     await page.goto('/Everyday.html');
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:5:8
+
+    Error Context: test-results\homepage-Everyday-Homepage-077c3-splay-exercises-with-videos-webkit\error-context.md
+
+
+[1A[2K  66) [webkit] › tests\homepage.spec.js:191:5 › Everyday Homepage › Content Display › Flow section should display exercise images 
+
+    [31mTest timeout of 30000ms exceeded while running "beforeEach" hook.[39m
+
+      3 | test.describe('Everyday Homepage', () => {
+      4 |   
+    > 5 |   test.beforeEach(async ({ page }) => {
+        |        ^
+      6 |     await page.goto('/Everyday.html');
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:5:8
+
+    Error Context: test-results\homepage-Everyday-Homepage-4837a-uld-display-exercise-images-webkit\error-context.md
+
+
+[1A[2K[94/152] [webkit] › tests\homepage.spec.js:200:5 › Everyday Homepage › Content Display › Focus section should display reflection content
+[1A[2K[95/152] [webkit] › tests\homepage.spec.js:222:5 › Everyday Homepage › Reminder Functionality › should display Reminder section with input fields
+[1A[2K[96/152] [webkit] › tests\homepage.spec.js:230:5 › Everyday Homepage › Reminder Functionality › should have reminder list elements
+[1A[2K[97/152] [webkit] › tests\homepage.spec.js:244:5 › Everyday Homepage › Responsive Design › should be responsive on desktop
+[1A[2K[98/152] [webkit] › tests\homepage.spec.js:250:5 › Everyday Homepage › Responsive Design › should be responsive on tablet
+[1A[2K[99/152] [webkit] › tests\homepage.spec.js:256:5 › Everyday Homepage › Responsive Design › should be responsive on mobile
+[1A[2K[100/152] [webkit] › tests\homepage.spec.js:262:5 › Everyday Homepage › Responsive Design › should maintain content visibility on all viewports
+[1A[2K[101/152] [webkit] › tests\homepage.spec.js:284:5 › Everyday Homepage › CSS & Styling › should load stylesheet
+[1A[2K[102/152] [webkit] › tests\homepage.spec.js:289:5 › Everyday Homepage › CSS & Styling › should load Font Awesome icons
+[1A[2K  67) [webkit] › tests\homepage.spec.js:262:5 › Everyday Homepage › Responsive Design › should maintain content visibility on all viewports 
+
+    [31mTest timeout of 30000ms exceeded.[39m
+
+    Error Context: test-results\homepage-Everyday-Homepage-84cbc-visibility-on-all-viewports-webkit\error-context.md
+
+
+[1A[2K[103/152] [webkit] › tests\homepage.spec.js:294:5 › Everyday Homepage › CSS & Styling › should load Google Fonts
+[1A[2K  68) [webkit] › tests\homepage.spec.js:289:5 › Everyday Homepage › CSS & Styling › should load Font Awesome icons 
+
+    [31mTest timeout of 30000ms exceeded.[39m
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\homepage-Everyday-Homepage-125e7-uld-load-Font-Awesome-icons-webkit\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\homepage-Everyday-Homepage-125e7-uld-load-Font-Awesome-icons-webkit\error-context.md
+
+
+[1A[2K[104/152] [webkit] › tests\homepage.spec.js:300:5 › Everyday Homepage › CSS & Styling › should have icons in navigation buttons
+[1A[2K  69) [webkit] › tests\homepage.spec.js:294:5 › Everyday Homepage › CSS & Styling › should load Google Fonts 
+
+    [31mTest timeout of 30000ms exceeded.[39m
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\homepage-Everyday-Homepage-634cb-ng-should-load-Google-Fonts-webkit\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\homepage-Everyday-Homepage-634cb-ng-should-load-Google-Fonts-webkit\error-context.md
+
+
+[1A[2K[105/152] [webkit] › tests\homepage.spec.js:308:5 › Everyday Homepage › Accessibility › should have proper semantic HTML structure
+[1A[2K  70) [webkit] › tests\homepage.spec.js:300:5 › Everyday Homepage › CSS & Styling › should have icons in navigation buttons 
+
+    [31mTest timeout of 30000ms exceeded while running "beforeEach" hook.[39m
+
+      3 | test.describe('Everyday Homepage', () => {
+      4 |   
+    > 5 |   test.beforeEach(async ({ page }) => {
+        |        ^
+      6 |     await page.goto('/Everyday.html');
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:5:8
+
+    Error: page.goto: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - navigating to "http://localhost:8000/Everyday.html", waiting until "load"[22m
+
+
+      4 |   
+      5 |   test.beforeEach(async ({ page }) => {
+    > 6 |     await page.goto('/Everyday.html');
+        |                ^
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+      9 |
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:6:16
+
+
+[1A[2K[106/152] [webkit] › tests\homepage.spec.js:324:5 › Everyday Homepage › Accessibility › should have proper heading hierarchy in sections
+[1A[2K[107/152] [webkit] › tests\homepage.spec.js:318:5 › Everyday Homepage › Accessibility › should have language attribute on html element
+[1A[2K  71) [webkit] › tests\homepage.spec.js:324:5 › Everyday Homepage › Accessibility › should have proper heading hierarchy in sections 
+
+    [31mTest timeout of 30000ms exceeded while running "beforeEach" hook.[39m
+
+      3 | test.describe('Everyday Homepage', () => {
+      4 |   
+    > 5 |   test.beforeEach(async ({ page }) => {
+        |        ^
+      6 |     await page.goto('/Everyday.html');
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:5:8
+
+    Error: page.waitForLoadState: Test timeout of 30000ms exceeded.
+
+       5 |   test.beforeEach(async ({ page }) => {
+       6 |     await page.goto('/Everyday.html');
+    >  7 |     await page.waitForLoadState('networkidle');
+         |                ^
+       8 |   });
+       9 |
+      10 |   test.describe('Page Layout & Header', () => {
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:7:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\homepage-Everyday-Homepage-38b9c-ading-hierarchy-in-sections-webkit\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[1A[2K  72) [webkit] › tests\homepage.spec.js:318:5 › Everyday Homepage › Accessibility › should have language attribute on html element 
+
+    [31mTest timeout of 30000ms exceeded while running "beforeEach" hook.[39m
+
+      3 | test.describe('Everyday Homepage', () => {
+      4 |   
+    > 5 |   test.beforeEach(async ({ page }) => {
+        |        ^
+      6 |     await page.goto('/Everyday.html');
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:5:8
+
+    Error Context: test-results\homepage-Everyday-Homepage-35155-e-attribute-on-html-element-webkit\error-context.md
+
+
+[1A[2K[108/152] [webkit] › tests\homepage.spec.js:332:5 › Everyday Homepage › Accessibility › should have meta viewport tag
+[1A[2K[109/152] [webkit] › tests\homepage.spec.js:337:5 › Everyday Homepage › Accessibility › should have proper character encoding
+[1A[2K  73) [webkit] › tests\homepage.spec.js:332:5 › Everyday Homepage › Accessibility › should have meta viewport tag 
+
+    [31mTest timeout of 30000ms exceeded while running "beforeEach" hook.[39m
+
+      3 | test.describe('Everyday Homepage', () => {
+      4 |   
+    > 5 |   test.beforeEach(async ({ page }) => {
+        |        ^
+      6 |     await page.goto('/Everyday.html');
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:5:8
+
+    Error: page.goto: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - navigating to "http://localhost:8000/Everyday.html", waiting until "load"[22m
+
+
+      4 |   
+      5 |   test.beforeEach(async ({ page }) => {
+    > 6 |     await page.goto('/Everyday.html');
+        |                ^
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+      9 |
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:6:16
+
+
+[1A[2K  74) [webkit] › tests\homepage.spec.js:337:5 › Everyday Homepage › Accessibility › should have proper character encoding 
+
+    [31mTest timeout of 30000ms exceeded while running "beforeEach" hook.[39m
+
+      3 | test.describe('Everyday Homepage', () => {
+      4 |   
+    > 5 |   test.beforeEach(async ({ page }) => {
+        |        ^
+      6 |     await page.goto('/Everyday.html');
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:5:8
+
+    Error: page.goto: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - navigating to "http://localhost:8000/Everyday.html", waiting until "load"[22m
+
+
+      4 |   
+      5 |   test.beforeEach(async ({ page }) => {
+    > 6 |     await page.goto('/Everyday.html');
+        |                ^
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+      9 |
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:6:16
+
+    Error Context: test-results\homepage-Everyday-Homepage-5218c-e-proper-character-encoding-webkit\error-context.md
+
+
+[1A[2K[110/152] [webkit] › tests\homepage.spec.js:359:5 › Everyday Homepage › Navigation Button Interactions › should highlight/interact with Focus button
+[1A[2K[111/152] [webkit] › tests\homepage.spec.js:367:5 › Everyday Homepage › Navigation Button Interactions › should allow rapid section switching
+[1A[2K  75) [webkit] › tests\homepage.spec.js:367:5 › Everyday Homepage › Navigation Button Interactions › should allow rapid section switching 
+
+    [31mTest timeout of 30000ms exceeded.[39m
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('button[data-section="Focus"]')[22m
+    [2m    - locator resolved to <button type="button" class="menu-btn" data-section="Focus">…</button>[22m
+    [2m  - attempting click action[22m
+    [2m    - waiting for element to be visible, enabled and stable[22m
+
+
+      481 |         await button.waitFor({ state: 'visible', timeout: 5000 });
+      482 |         await page.waitForTimeout(100);
+    > 483 |         await button.click();
+          |                      ^
+      484 |         
+      485 |         // Wait for section title to update
+      486 |         await page.waitForFunction(
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:483:22
+
+    Error Context: test-results\homepage-Everyday-Homepage-e031f-low-rapid-section-switching-webkit\error-context.md
+
+
+[1A[2K  76) [webkit] › tests\homepage.spec.js:359:5 › Everyday Homepage › Navigation Button Interactions › should highlight/interact with Focus button 
+
+    [31mTest timeout of 30000ms exceeded while running "beforeEach" hook.[39m
+
+      3 | test.describe('Everyday Homepage', () => {
+      4 |   
+    > 5 |   test.beforeEach(async ({ page }) => {
+        |        ^
+      6 |     await page.goto('/Everyday.html');
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:5:8
+
+    Error: page.waitForLoadState: Test timeout of 30000ms exceeded.
+
+       5 |   test.beforeEach(async ({ page }) => {
+       6 |     await page.goto('/Everyday.html');
+    >  7 |     await page.waitForLoadState('networkidle');
+         |                ^
+       8 |   });
+       9 |
+      10 |   test.describe('Page Layout & Header', () => {
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:7:16
+
+    Error Context: test-results\homepage-Everyday-Homepage-e174e--interact-with-Focus-button-webkit\error-context.md
+
+
+[1A[2K[112/152] [webkit] › tests\homepage.spec.js:391:5 › Everyday Homepage › Navigation Button Interactions › should switch between sections smoothly
+[1A[2K[113/152] [webkit] › tests\homepage.spec.js:424:5 › Everyday Homepage › Flow Exercise Content › should display all Flow exercises
+[1A[2K  77) [webkit] › tests\homepage.spec.js:391:5 › Everyday Homepage › Navigation Button Interactions › should switch between sections smoothly 
+
+    [31mTest timeout of 30000ms exceeded while running "beforeEach" hook.[39m
+
+      3 | test.describe('Everyday Homepage', () => {
+      4 |   
+    > 5 |   test.beforeEach(async ({ page }) => {
+        |        ^
+      6 |     await page.goto('/Everyday.html');
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:5:8
+
+    Error Context: test-results\homepage-Everyday-Homepage-e8bc3-h-between-sections-smoothly-webkit\error-context.md
+
+
+[1A[2K  78) [webkit] › tests\homepage.spec.js:424:5 › Everyday Homepage › Flow Exercise Content › should display all Flow exercises 
+
+    [31mTest timeout of 30000ms exceeded while running "beforeEach" hook.[39m
+
+      3 | test.describe('Everyday Homepage', () => {
+      4 |   
+    > 5 |   test.beforeEach(async ({ page }) => {
+        |        ^
+      6 |     await page.goto('/Everyday.html');
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:5:8
+
+    Error Context: test-results\homepage-Everyday-Homepage-1df27--display-all-Flow-exercises-webkit\error-context.md
+
+
+[1A[2K[114/152] [Mobile Chrome] › tests\homepage.spec.js:11:5 › Everyday Homepage › Page Layout & Header › should load the homepage successfully
+[1A[2K[115/152] [webkit] › tests\homepage.spec.js:447:5 › Everyday Homepage › Flow Exercise Content › should have exercise descriptions
+[1A[2K[116/152] [Mobile Chrome] › tests\homepage.spec.js:15:5 › Everyday Homepage › Page Layout & Header › should display main header
+[1A[2K  79) [webkit] › tests\homepage.spec.js:447:5 › Everyday Homepage › Flow Exercise Content › should have exercise descriptions 
+
+    [31mTest timeout of 30000ms exceeded while running "beforeEach" hook.[39m
+
+      3 | test.describe('Everyday Homepage', () => {
+      4 |   
+    > 5 |   test.beforeEach(async ({ page }) => {
+        |        ^
+      6 |     await page.goto('/Everyday.html');
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:5:8
+
+    Error: page.goto: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - navigating to "http://localhost:8000/Everyday.html", waiting until "load"[22m
+
+
+      4 |   
+      5 |   test.beforeEach(async ({ page }) => {
+    > 6 |     await page.goto('/Everyday.html');
+        |                ^
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+      9 |
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:6:16
+
+
+[1A[2K[117/152] [Mobile Chrome] › tests\homepage.spec.js:20:5 › Everyday Homepage › Page Layout & Header › should display footer with copyright and version
+[1A[2K[118/152] [Mobile Chrome] › tests\homepage.spec.js:27:5 › Everyday Homepage › Page Layout & Header › should display welcome section by default
+[1A[2K  80) [Mobile Chrome] › tests\homepage.spec.js:15:5 › Everyday Homepage › Page Layout & Header › should display main header 
+
+    [31mTest timeout of 30000ms exceeded while running "beforeEach" hook.[39m
+
+      3 | test.describe('Everyday Homepage', () => {
+      4 |   
+    > 5 |   test.beforeEach(async ({ page }) => {
+        |        ^
+      6 |     await page.goto('/Everyday.html');
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:5:8
+
+    Error: browserContext.newPage: Test timeout of 30000ms exceeded.
+
+
+[1A[2K[119/152] [Mobile Chrome] › tests\homepage.spec.js:50:5 › Everyday Homepage › Sidebar Navigation › should display sidebar with all menu items
+[1A[2K  81) [Mobile Chrome] › tests\homepage.spec.js:27:5 › Everyday Homepage › Page Layout & Header › should display welcome section by default 
+
+    [31mTest timeout of 30000ms exceeded while running "beforeEach" hook.[39m
+
+      3 | test.describe('Everyday Homepage', () => {
+      4 |   
+    > 5 |   test.beforeEach(async ({ page }) => {
+        |        ^
+      6 |     await page.goto('/Everyday.html');
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:5:8
+
+    Error: browserContext.newPage: Test timeout of 30000ms exceeded.
+
+
+[1A[2K[120/152] [Mobile Chrome] › tests\homepage.spec.js:74:5 › Everyday Homepage › Sidebar Navigation › should navigate to Home section
+[1A[2K[121/152] [Mobile Chrome] › tests\homepage.spec.js:80:5 › Everyday Homepage › Sidebar Navigation › should navigate to Focus section
+[1A[2K[122/152] [Mobile Chrome] › tests\homepage.spec.js:90:5 › Everyday Homepage › Sidebar Navigation › should navigate to Flow section
+[1A[2K  82) [Mobile Chrome] › tests\homepage.spec.js:50:5 › Everyday Homepage › Sidebar Navigation › should display sidebar with all menu items 
+
+    [31mTest timeout of 30000ms exceeded while running "beforeEach" hook.[39m
+
+      3 | test.describe('Everyday Homepage', () => {
+      4 |   
+    > 5 |   test.beforeEach(async ({ page }) => {
+        |        ^
+      6 |     await page.goto('/Everyday.html');
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:5:8
+
+    Error: page.goto: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - navigating to "http://localhost:8000/Everyday.html", waiting until "load"[22m
+
+
+      4 |   
+      5 |   test.beforeEach(async ({ page }) => {
+    > 6 |     await page.goto('/Everyday.html');
+        |                ^
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+      9 |
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:6:16
+
+
+[1A[2K[123/152] [Mobile Chrome] › tests\homepage.spec.js:100:5 › Everyday Homepage › Sidebar Navigation › should navigate to Share section
+[1A[2K  83) [Mobile Chrome] › tests\homepage.spec.js:100:5 › Everyday Homepage › Sidebar Navigation › should navigate to Share section 
+
+    [31mTest timeout of 30000ms exceeded.[39m
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\homepage-Everyday-Homepage-a3063-d-navigate-to-Share-section-Mobile-Chrome\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\homepage-Everyday-Homepage-a3063-d-navigate-to-Share-section-Mobile-Chrome\error-context.md
+
+
+[1A[2K[124/152] [Mobile Chrome] › tests\homepage.spec.js:106:5 › Everyday Homepage › Sidebar Navigation › should navigate to Explore section
+[1A[2K  84) [Mobile Chrome] › tests\homepage.spec.js:90:5 › Everyday Homepage › Sidebar Navigation › should navigate to Flow section 
+
+    [31mTest timeout of 30000ms exceeded while running "beforeEach" hook.[39m
+
+      3 | test.describe('Everyday Homepage', () => {
+      4 |   
+    > 5 |   test.beforeEach(async ({ page }) => {
+        |        ^
+      6 |     await page.goto('/Everyday.html');
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:5:8
+
+    Error: browserContext.newPage: Test timeout of 30000ms exceeded.
+
+
+[1A[2K[125/152] [Mobile Chrome] › tests\homepage.spec.js:118:5 › Everyday Homepage › Sidebar Navigation › should navigate to Kontakt section via footer
+[1A[2K[126/152] [Mobile Chrome] › tests\homepage.spec.js:112:5 › Everyday Homepage › Sidebar Navigation › should navigate to Reminder section
+[1A[2K[127/152] [Mobile Chrome] › tests\homepage.spec.js:126:5 › Everyday Homepage › Mobile Menu Toggle › should display menu toggle button on mobile
+[1A[2K[128/152] [Mobile Chrome] › tests\homepage.spec.js:132:5 › Everyday Homepage › Mobile Menu Toggle › should toggle sidebar on mobile click
+[1A[2K[129/152] [Mobile Chrome] › tests\homepage.spec.js:149:5 › Everyday Homepage › Mobile Menu Toggle › should toggle sidebar multiple times
+[1A[2K[130/152] [Mobile Chrome] › tests\homepage.spec.js:176:5 › Everyday Homepage › Content Display › Flow section should display exercises with videos
+[1A[2K  85) [Mobile Chrome] › tests\homepage.spec.js:176:5 › Everyday Homepage › Content Display › Flow section should display exercises with videos 
+
+    [31mTest timeout of 30000ms exceeded.[39m
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\homepage-Everyday-Homepage-077c3-splay-exercises-with-videos-Mobile-Chrome\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\homepage-Everyday-Homepage-077c3-splay-exercises-with-videos-Mobile-Chrome\error-context.md
+
+
+[1A[2K  86) [Mobile Chrome] › tests\homepage.spec.js:149:5 › Everyday Homepage › Mobile Menu Toggle › should toggle sidebar multiple times 
+
+    [31mTest timeout of 30000ms exceeded.[39m
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#menuToggle')[22m
+    [2m    - locator resolved to <div tabindex="0" role="button" id="menuToggle" class="menu-toggle">☰</div>[22m
+    [2m  - attempting click action[22m
+    [2m    2 × waiting for element to be visible, enabled and stable[22m
+    [2m      - element is visible, enabled and stable[22m
+    [2m      - scrolling into view if needed[22m
+    [2m      - done scrolling[22m
+    [2m      - <nav id="sidebar" class="sidebar active">…</nav> intercepts pointer events[22m
+    [2m    - retrying click action[22m
+    [2m    - waiting 20ms[22m
+    [2m    2 × waiting for element to be visible, enabled and stable[22m
+    [2m      - element is visible, enabled and stable[22m
+    [2m      - scrolling into view if needed[22m
+    [2m      - done scrolling[22m
+    [2m      - <nav id="sidebar" class="sidebar active">…</nav> intercepts pointer events[22m
+    [2m    - retrying click action[22m
+    [2m      - waiting 100ms[22m
+    [2m    13 × waiting for element to be visible, enabled and stable[22m
+    [2m       - element is visible, enabled and stable[22m
+    [2m       - scrolling into view if needed[22m
+    [2m       - done scrolling[22m
+    [2m       - <nav id="sidebar" class="sidebar active">…</nav> intercepts pointer events[22m
+    [2m     - retrying click action[22m
+    [2m       - waiting 500ms[22m
+    [2m    - waiting for element to be visible, enabled and stable[22m
+    [2m    - element is visible, enabled and stable[22m
+    [2m    - scrolling into view if needed[22m
+    [2m    - done scrolling[22m
+
+
+      196 |       
+      197 |       for (let i = 0; i < 3; i++) {
+    > 198 |         await menuToggle.click();
+          |                          ^
+      199 |         await page.waitForTimeout(100);
+      200 |       }
+      201 |       
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:198:26
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\homepage-Everyday-Homepage-ea1b7-ggle-sidebar-multiple-times-Mobile-Chrome\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\homepage-Everyday-Homepage-ea1b7-ggle-sidebar-multiple-times-Mobile-Chrome\error-context.md
+
+
+[1A[2K[131/152] [Mobile Chrome] › tests\homepage.spec.js:191:5 › Everyday Homepage › Content Display › Flow section should display exercise images
+[1A[2K[132/152] [Mobile Chrome] › tests\homepage.spec.js:200:5 › Everyday Homepage › Content Display › Focus section should display reflection content
+[1A[2K[133/152] [Mobile Chrome] › tests\homepage.spec.js:222:5 › Everyday Homepage › Reminder Functionality › should display Reminder section with input fields
+[1A[2K[134/152] [Mobile Chrome] › tests\homepage.spec.js:230:5 › Everyday Homepage › Reminder Functionality › should have reminder list elements
+[1A[2K[135/152] [Mobile Chrome] › tests\homepage.spec.js:244:5 › Everyday Homepage › Responsive Design › should be responsive on desktop
+[1A[2K[136/152] [Mobile Chrome] › tests\homepage.spec.js:250:5 › Everyday Homepage › Responsive Design › should be responsive on tablet
+[1A[2K[137/152] [Mobile Chrome] › tests\homepage.spec.js:256:5 › Everyday Homepage › Responsive Design › should be responsive on mobile
+[1A[2K  87) [Mobile Chrome] › tests\homepage.spec.js:230:5 › Everyday Homepage › Reminder Functionality › should have reminder list elements 
+
+    [31mTest timeout of 30000ms exceeded.[39m
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\homepage-Everyday-Homepage-825e8-have-reminder-list-elements-Mobile-Chrome\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\homepage-Everyday-Homepage-825e8-have-reminder-list-elements-Mobile-Chrome\error-context.md
+
+
+[1A[2K[138/152] [Mobile Chrome] › tests\homepage.spec.js:284:5 › Everyday Homepage › CSS & Styling › should load stylesheet
+[1A[2K[139/152] [Mobile Chrome] › tests\homepage.spec.js:289:5 › Everyday Homepage › CSS & Styling › should load Font Awesome icons
+[1A[2K[140/152] [Mobile Chrome] › tests\homepage.spec.js:294:5 › Everyday Homepage › CSS & Styling › should load Google Fonts
+[1A[2K[141/152] [Mobile Chrome] › tests\homepage.spec.js:262:5 › Everyday Homepage › Responsive Design › should maintain content visibility on all viewports
+[1A[2K[142/152] [Mobile Chrome] › tests\homepage.spec.js:300:5 › Everyday Homepage › CSS & Styling › should have icons in navigation buttons
+[1A[2K[143/152] [Mobile Chrome] › tests\homepage.spec.js:308:5 › Everyday Homepage › Accessibility › should have proper semantic HTML structure
+[1A[2K[144/152] [Mobile Chrome] › tests\homepage.spec.js:318:5 › Everyday Homepage › Accessibility › should have language attribute on html element
+[1A[2K[145/152] [Mobile Chrome] › tests\homepage.spec.js:324:5 › Everyday Homepage › Accessibility › should have proper heading hierarchy in sections
+[1A[2K  88) [Mobile Chrome] › tests\homepage.spec.js:308:5 › Everyday Homepage › Accessibility › should have proper semantic HTML structure 
+
+    [31mTest timeout of 30000ms exceeded while running "beforeEach" hook.[39m
+
+      3 | test.describe('Everyday Homepage', () => {
+      4 |   
+    > 5 |   test.beforeEach(async ({ page }) => {
+        |        ^
+      6 |     await page.goto('/Everyday.html');
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:5:8
+
+    Error: browserContext.newPage: Test timeout of 30000ms exceeded.
+
+
+[1A[2K  89) [Mobile Chrome] › tests\homepage.spec.js:324:5 › Everyday Homepage › Accessibility › should have proper heading hierarchy in sections 
+
+    [31mTest timeout of 30000ms exceeded while running "beforeEach" hook.[39m
+
+      3 | test.describe('Everyday Homepage', () => {
+      4 |   
+    > 5 |   test.beforeEach(async ({ page }) => {
+        |        ^
+      6 |     await page.goto('/Everyday.html');
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:5:8
+
+    Error: browserContext.newPage: Test timeout of 30000ms exceeded.
+
+
+[1A[2K[146/152] [Mobile Chrome] › tests\homepage.spec.js:332:5 › Everyday Homepage › Accessibility › should have meta viewport tag
+[1A[2K[147/152] [Mobile Chrome] › tests\homepage.spec.js:337:5 › Everyday Homepage › Accessibility › should have proper character encoding
+[1A[2K[148/152] [Mobile Chrome] › tests\homepage.spec.js:359:5 › Everyday Homepage › Navigation Button Interactions › should highlight/interact with Focus button
+[1A[2K[149/152] [Mobile Chrome] › tests\homepage.spec.js:367:5 › Everyday Homepage › Navigation Button Interactions › should allow rapid section switching
+[1A[2K  90) [Mobile Chrome] › tests\homepage.spec.js:359:5 › Everyday Homepage › Navigation Button Interactions › should highlight/interact with Focus button 
+
+    [31mTest timeout of 30000ms exceeded while running "beforeEach" hook.[39m
+
+      3 | test.describe('Everyday Homepage', () => {
+      4 |   
+    > 5 |   test.beforeEach(async ({ page }) => {
+        |        ^
+      6 |     await page.goto('/Everyday.html');
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:5:8
+
+    Error: browserContext.newPage: Test timeout of 30000ms exceeded.
+
+
+[1A[2K[150/152] [Mobile Chrome] › tests\homepage.spec.js:391:5 › Everyday Homepage › Navigation Button Interactions › should switch between sections smoothly
+[1A[2K[151/152] [Mobile Chrome] › tests\homepage.spec.js:424:5 › Everyday Homepage › Flow Exercise Content › should display all Flow exercises
+[1A[2K  91) [Mobile Chrome] › tests\homepage.spec.js:367:5 › Everyday Homepage › Navigation Button Interactions › should allow rapid section switching 
+
+    [31mTest timeout of 30000ms exceeded while running "beforeEach" hook.[39m
+
+      3 | test.describe('Everyday Homepage', () => {
+      4 |   
+    > 5 |   test.beforeEach(async ({ page }) => {
+        |        ^
+      6 |     await page.goto('/Everyday.html');
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:5:8
+
+    Error: browserContext.newPage: Test timeout of 30000ms exceeded.
+
+
+[1A[2K[152/152] [Mobile Chrome] › tests\homepage.spec.js:447:5 › Everyday Homepage › Flow Exercise Content › should have exercise descriptions
+[1A[2K  92) [Mobile Chrome] › tests\homepage.spec.js:447:5 › Everyday Homepage › Flow Exercise Content › should have exercise descriptions 
+
+    TimeoutError: page.waitForSelector: Timeout 5000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#sectionText p') to be visible[22m
+    [2m    - locator resolved to 17 elements. Proceeding with the first one: <p>Denna övning sätter dina triceps i arbete och str…</p>[22m
+
+
+      583 |         expect(hasExercise).toBeTruthy();
+      584 |       }
+    > 585 |     });
+          |                  ^
+      586 |
+      587 |     test('should have exercise descriptions', async ({ page }) => {
+      588 |       await navigateToFlow(page);
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:585:18
+
+    Error Context: test-results\homepage-Everyday-Homepage-886bd--have-exercise-descriptions-Mobile-Chrome\error-context.md
+
+
+[1A[2K  93) [Mobile Chrome] › tests\homepage.spec.js:424:5 › Everyday Homepage › Flow Exercise Content › should display all Flow exercises 
+
+    [31mTest timeout of 30000ms exceeded while running "beforeEach" hook.[39m
+
+      3 | test.describe('Everyday Homepage', () => {
+      4 |   
+    > 5 |   test.beforeEach(async ({ page }) => {
+        |        ^
+      6 |     await page.goto('/Everyday.html');
+      7 |     await page.waitForLoadState('networkidle');
+      8 |   });
+        at C:\Users\kim.nordin\OneDrive - Irisgruppen\Skrivbordet\HEMSIDA\tests\homepage.spec.js:5:8
+
+    Error: browserContext.newPage: Test timeout of 30000ms exceeded.
+
+
+[1A[2K  93 failed
+    [chromium] › tests\homepage.spec.js:149:5 › Everyday Homepage › Mobile Menu Toggle › should toggle sidebar multiple times 
+    [chromium] › tests\homepage.spec.js:250:5 › Everyday Homepage › Responsive Design › should be responsive on tablet 
+    [chromium] › tests\homepage.spec.js:256:5 › Everyday Homepage › Responsive Design › should be responsive on mobile 
+    [chromium] › tests\homepage.spec.js:284:5 › Everyday Homepage › CSS & Styling › should load stylesheet 
+    [chromium] › tests\homepage.spec.js:289:5 › Everyday Homepage › CSS & Styling › should load Font Awesome icons 
+    [chromium] › tests\homepage.spec.js:300:5 › Everyday Homepage › CSS & Styling › should have icons in navigation buttons 
+    [chromium] › tests\homepage.spec.js:318:5 › Everyday Homepage › Accessibility › should have language attribute on html element 
+    [chromium] › tests\homepage.spec.js:337:5 › Everyday Homepage › Accessibility › should have proper character encoding 
+    [chromium] › tests\homepage.spec.js:359:5 › Everyday Homepage › Navigation Button Interactions › should highlight/interact with Focus button 
+    [chromium] › tests\homepage.spec.js:424:5 › Everyday Homepage › Flow Exercise Content › should display all Flow exercises 
+    [chromium] › tests\homepage.spec.js:447:5 › Everyday Homepage › Flow Exercise Content › should have exercise descriptions 
+    [firefox] › tests\homepage.spec.js:11:5 › Everyday Homepage › Page Layout & Header › should load the homepage successfully 
+    [firefox] › tests\homepage.spec.js:15:5 › Everyday Homepage › Page Layout & Header › should display main header 
+    [firefox] › tests\homepage.spec.js:20:5 › Everyday Homepage › Page Layout & Header › should display footer with copyright and version 
+    [firefox] › tests\homepage.spec.js:27:5 › Everyday Homepage › Page Layout & Header › should display welcome section by default 
+    [firefox] › tests\homepage.spec.js:50:5 › Everyday Homepage › Sidebar Navigation › should display sidebar with all menu items 
+    [firefox] › tests\homepage.spec.js:74:5 › Everyday Homepage › Sidebar Navigation › should navigate to Home section 
+    [firefox] › tests\homepage.spec.js:80:5 › Everyday Homepage › Sidebar Navigation › should navigate to Focus section 
+    [firefox] › tests\homepage.spec.js:90:5 › Everyday Homepage › Sidebar Navigation › should navigate to Flow section 
+    [firefox] › tests\homepage.spec.js:100:5 › Everyday Homepage › Sidebar Navigation › should navigate to Share section 
+    [firefox] › tests\homepage.spec.js:106:5 › Everyday Homepage › Sidebar Navigation › should navigate to Explore section 
+    [firefox] › tests\homepage.spec.js:112:5 › Everyday Homepage › Sidebar Navigation › should navigate to Reminder section 
+    [firefox] › tests\homepage.spec.js:118:5 › Everyday Homepage › Sidebar Navigation › should navigate to Kontakt section via footer 
+    [firefox] › tests\homepage.spec.js:126:5 › Everyday Homepage › Mobile Menu Toggle › should display menu toggle button on mobile 
+    [firefox] › tests\homepage.spec.js:132:5 › Everyday Homepage › Mobile Menu Toggle › should toggle sidebar on mobile click 
+    [firefox] › tests\homepage.spec.js:149:5 › Everyday Homepage › Mobile Menu Toggle › should toggle sidebar multiple times 
+    [firefox] › tests\homepage.spec.js:176:5 › Everyday Homepage › Content Display › Flow section should display exercises with videos 
+    [firefox] › tests\homepage.spec.js:191:5 › Everyday Homepage › Content Display › Flow section should display exercise images 
+    [firefox] › tests\homepage.spec.js:200:5 › Everyday Homepage › Content Display › Focus section should display reflection content 
+    [firefox] › tests\homepage.spec.js:222:5 › Everyday Homepage › Reminder Functionality › should display Reminder section with input fields 
+    [firefox] › tests\homepage.spec.js:230:5 › Everyday Homepage › Reminder Functionality › should have reminder list elements 
+    [firefox] › tests\homepage.spec.js:244:5 › Everyday Homepage › Responsive Design › should be responsive on desktop 
+    [firefox] › tests\homepage.spec.js:250:5 › Everyday Homepage › Responsive Design › should be responsive on tablet 
+    [firefox] › tests\homepage.spec.js:256:5 › Everyday Homepage › Responsive Design › should be responsive on mobile 
+    [firefox] › tests\homepage.spec.js:262:5 › Everyday Homepage › Responsive Design › should maintain content visibility on all viewports 
+    [firefox] › tests\homepage.spec.js:284:5 › Everyday Homepage › CSS & Styling › should load stylesheet 
+    [firefox] › tests\homepage.spec.js:289:5 › Everyday Homepage › CSS & Styling › should load Font Awesome icons 
+    [firefox] › tests\homepage.spec.js:294:5 › Everyday Homepage › CSS & Styling › should load Google Fonts 
+    [firefox] › tests\homepage.spec.js:300:5 › Everyday Homepage › CSS & Styling › should have icons in navigation buttons 
+    [firefox] › tests\homepage.spec.js:308:5 › Everyday Homepage › Accessibility › should have proper semantic HTML structure 
+    [firefox] › tests\homepage.spec.js:318:5 › Everyday Homepage › Accessibility › should have language attribute on html element 
+    [firefox] › tests\homepage.spec.js:324:5 › Everyday Homepage › Accessibility › should have proper heading hierarchy in sections 
+    [firefox] › tests\homepage.spec.js:332:5 › Everyday Homepage › Accessibility › should have meta viewport tag 
+    [firefox] › tests\homepage.spec.js:337:5 › Everyday Homepage › Accessibility › should have proper character encoding 
+    [firefox] › tests\homepage.spec.js:359:5 › Everyday Homepage › Navigation Button Interactions › should highlight/interact with Focus button 
+    [firefox] › tests\homepage.spec.js:367:5 › Everyday Homepage › Navigation Button Interactions › should allow rapid section switching 
+    [firefox] › tests\homepage.spec.js:391:5 › Everyday Homepage › Navigation Button Interactions › should switch between sections smoothly 
+    [firefox] › tests\homepage.spec.js:424:5 › Everyday Homepage › Flow Exercise Content › should display all Flow exercises 
+    [firefox] › tests\homepage.spec.js:447:5 › Everyday Homepage › Flow Exercise Content › should have exercise descriptions 
+    [webkit] › tests\homepage.spec.js:11:5 › Everyday Homepage › Page Layout & Header › should load the homepage successfully 
+    [webkit] › tests\homepage.spec.js:15:5 › Everyday Homepage › Page Layout & Header › should display main header 
+    [webkit] › tests\homepage.spec.js:20:5 › Everyday Homepage › Page Layout & Header › should display footer with copyright and version 
+    [webkit] › tests\homepage.spec.js:27:5 › Everyday Homepage › Page Layout & Header › should display welcome section by default 
+    [webkit] › tests\homepage.spec.js:50:5 › Everyday Homepage › Sidebar Navigation › should display sidebar with all menu items 
+    [webkit] › tests\homepage.spec.js:74:5 › Everyday Homepage › Sidebar Navigation › should navigate to Home section 
+    [webkit] › tests\homepage.spec.js:80:5 › Everyday Homepage › Sidebar Navigation › should navigate to Focus section 
+    [webkit] › tests\homepage.spec.js:90:5 › Everyday Homepage › Sidebar Navigation › should navigate to Flow section 
+    [webkit] › tests\homepage.spec.js:100:5 › Everyday Homepage › Sidebar Navigation › should navigate to Share section 
+    [webkit] › tests\homepage.spec.js:106:5 › Everyday Homepage › Sidebar Navigation › should navigate to Explore section 
+    [webkit] › tests\homepage.spec.js:112:5 › Everyday Homepage › Sidebar Navigation › should navigate to Reminder section 
+    [webkit] › tests\homepage.spec.js:118:5 › Everyday Homepage › Sidebar Navigation › should navigate to Kontakt section via footer 
+    [webkit] › tests\homepage.spec.js:126:5 › Everyday Homepage › Mobile Menu Toggle › should display menu toggle button on mobile 
+    [webkit] › tests\homepage.spec.js:132:5 › Everyday Homepage › Mobile Menu Toggle › should toggle sidebar on mobile click 
+    [webkit] › tests\homepage.spec.js:149:5 › Everyday Homepage › Mobile Menu Toggle › should toggle sidebar multiple times 
+    [webkit] › tests\homepage.spec.js:176:5 › Everyday Homepage › Content Display › Flow section should display exercises with videos 
+    [webkit] › tests\homepage.spec.js:191:5 › Everyday Homepage › Content Display › Flow section should display exercise images 
+    [webkit] › tests\homepage.spec.js:262:5 › Everyday Homepage › Responsive Design › should maintain content visibility on all viewports 
+    [webkit] › tests\homepage.spec.js:289:5 › Everyday Homepage › CSS & Styling › should load Font Awesome icons 
+    [webkit] › tests\homepage.spec.js:294:5 › Everyday Homepage › CSS & Styling › should load Google Fonts 
+    [webkit] › tests\homepage.spec.js:300:5 › Everyday Homepage › CSS & Styling › should have icons in navigation buttons 
+    [webkit] › tests\homepage.spec.js:318:5 › Everyday Homepage › Accessibility › should have language attribute on html element 
+    [webkit] › tests\homepage.spec.js:324:5 › Everyday Homepage › Accessibility › should have proper heading hierarchy in sections 
+    [webkit] › tests\homepage.spec.js:332:5 › Everyday Homepage › Accessibility › should have meta viewport tag 
+    [webkit] › tests\homepage.spec.js:337:5 › Everyday Homepage › Accessibility › should have proper character encoding 
+    [webkit] › tests\homepage.spec.js:359:5 › Everyday Homepage › Navigation Button Interactions › should highlight/interact with Focus button 
+    [webkit] › tests\homepage.spec.js:367:5 › Everyday Homepage › Navigation Button Interactions › should allow rapid section switching 
+    [webkit] › tests\homepage.spec.js:391:5 › Everyday Homepage › Navigation Button Interactions › should switch between sections smoothly 
+    [webkit] › tests\homepage.spec.js:424:5 › Everyday Homepage › Flow Exercise Content › should display all Flow exercises 
+    [webkit] › tests\homepage.spec.js:447:5 › Everyday Homepage › Flow Exercise Content › should have exercise descriptions 
+    [Mobile Chrome] › tests\homepage.spec.js:15:5 › Everyday Homepage › Page Layout & Header › should display main header 
+    [Mobile Chrome] › tests\homepage.spec.js:27:5 › Everyday Homepage › Page Layout & Header › should display welcome section by default 
+    [Mobile Chrome] › tests\homepage.spec.js:50:5 › Everyday Homepage › Sidebar Navigation › should display sidebar with all menu items 
+    [Mobile Chrome] › tests\homepage.spec.js:90:5 › Everyday Homepage › Sidebar Navigation › should navigate to Flow section 
+    [Mobile Chrome] › tests\homepage.spec.js:100:5 › Everyday Homepage › Sidebar Navigation › should navigate to Share section 
+    [Mobile Chrome] › tests\homepage.spec.js:149:5 › Everyday Homepage › Mobile Menu Toggle › should toggle sidebar multiple times 
+    [Mobile Chrome] › tests\homepage.spec.js:176:5 › Everyday Homepage › Content Display › Flow section should display exercises with videos 
+    [Mobile Chrome] › tests\homepage.spec.js:230:5 › Everyday Homepage › Reminder Functionality › should have reminder list elements 
+    [Mobile Chrome] › tests\homepage.spec.js:308:5 › Everyday Homepage › Accessibility › should have proper semantic HTML structure 
+    [Mobile Chrome] › tests\homepage.spec.js:324:5 › Everyday Homepage › Accessibility › should have proper heading hierarchy in sections 
+    [Mobile Chrome] › tests\homepage.spec.js:359:5 › Everyday Homepage › Navigation Button Interactions › should highlight/interact with Focus button 
+    [Mobile Chrome] › tests\homepage.spec.js:367:5 › Everyday Homepage › Navigation Button Interactions › should allow rapid section switching 
+    [Mobile Chrome] › tests\homepage.spec.js:424:5 › Everyday Homepage › Flow Exercise Content › should display all Flow exercises 
+    [Mobile Chrome] › tests\homepage.spec.js:447:5 › Everyday Homepage › Flow Exercise Content › should have exercise descriptions 
+  59 passed (1.7h)
+
+[36m  Serving HTML report at http://localhost:65361. Press Ctrl+C to quit.[39m
