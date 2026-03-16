@@ -1,8 +1,26 @@
+# Node modules
+node_modules/
+
+# Loggar
+*.log
+
+# Textfiler (om du inte vill ha dem i repo)
+*.txt
 
 # Playwright
-node_modules/
 /test-results/
 /playwright-report/
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/
+
+# OS-specifika filer
+.DS_Store
+Thumbs.db
+
+# VSCode
+.vscode/
+
+# Bygg- eller dist-mappar (om du har någon)
+dist/
+build/

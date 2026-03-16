@@ -1,3 +1,7 @@
+/*
+Initially developed at Codepen homepage with only room for one file of each type (html, css, js). This file contains all JavaScript code for the website.
+*/
+
 // Hämta elementreferenser 
 
 const sidebar = document.getElementById("sidebar"); 
@@ -22,7 +26,9 @@ let beepAudio = new Audio("https://www.soundjay.com/buttons_c2026/sounds/button-
 
 istället för alert? Borde gå att 
 
-använda CSS för det. */  
+använda CSS för det.
+Eller mer robust med att utveckla en egen lösning
+ */  
 
 // Funktion för att visa ett meddelande med ljud  
 
